@@ -1,0 +1,14 @@
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\ApplicationIcon.png
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Background.png
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\CollegeFootballSeasonPredictor.dll
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\CollegeFootballSeasonPredictor.pdb
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\AppManifest.xaml
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\CollegeFootballSeasonPredictor.xap
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\ResolveAssemblyReference.cache
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\App.g.i.cs
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\DetailsPage.g.i.cs
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\MainPage.g.i.cs
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.g.resources
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.dll
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.pdb
+c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\XapCacheFile.xml
