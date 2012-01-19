@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using CollegeFootballSeasonPredictor.Model;
 
 namespace CollegeFootballSeasonPredictor
 {
@@ -74,6 +75,18 @@ namespace CollegeFootballSeasonPredictor
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            DataHelper.MoveReferenceDatabase();
+            
+            // Create the database if it does not yet exist.
+            using (CollegeFootballSchedulePredictorDataContext db = new CollegeFootballSchedulePredictorDataContext(CollegeFootballSchedulePredictorDataContext.DBConnectionString))
+            {
+                if (db.DatabaseExists() == false)
+                {
+                    throw new Exception("Reference Database not loaded correctly");
+                }
+            }
+            
 
         }
 
