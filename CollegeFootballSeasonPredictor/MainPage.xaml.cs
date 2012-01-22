@@ -20,11 +20,12 @@ namespace CollegeFootballSeasonPredictor
         {
             InitializeComponent();
 
-            // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
+            // Set the data context of the UI
+            DataContext = App.TeamViewModel;
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
         }
 
+        /*
         // Handle selection changed on ListBox
         private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -38,13 +39,14 @@ namespace CollegeFootballSeasonPredictor
             // Reset selected index to -1 (no selection)
             MainListBox.SelectedIndex = -1;
         }
+         */
 
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if (!App.ViewModel.IsDataLoaded)
+            if (!App.TeamViewModel.IsDataLoaded)
             {
-                App.ViewModel.LoadData();
+                App.TeamViewModel.LoadData();
             }
         }
     }

@@ -13,26 +13,27 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using CollegeFootballSeasonPredictor.Model;
+using CollegeFootballSeasonPredictor.ViewModel;
 
 namespace CollegeFootballSeasonPredictor
 {
     public partial class App : Application
     {
-        private static MainViewModel viewModel = null;
+        private static TeamViewModel _teamViewModel = null;
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.
         /// </summary>
         /// <returns>The MainViewModel object.</returns>
-        public static MainViewModel ViewModel
+        public static TeamViewModel TeamViewModel
         {
             get
             {
                 // Delay creation of the view model until necessary
-                if (viewModel == null)
-                    viewModel = new MainViewModel();
+                if (_teamViewModel == null)
+                    _teamViewModel = new TeamViewModel(CollegeFootballSchedulePredictorDataContext.DBConnectionString);
 
-                return viewModel;
+                return _teamViewModel;
             }
         }
 
@@ -101,9 +102,9 @@ namespace CollegeFootballSeasonPredictor
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             // Ensure that application state is restored appropriately
-            if (!App.ViewModel.IsDataLoaded)
+            if (!App.TeamViewModel.IsDataLoaded)
             {
-                App.ViewModel.LoadData();
+                App.TeamViewModel.LoadData();
             }
         }
 

@@ -3,12 +3,11 @@ using System.IO;
 using System.IO.IsolatedStorage;
 using System.Windows;
 
-
 namespace CollegeFootballSeasonPredictor
 {
     public class DataHelper
     {
-        public static string DB_NAME = "FootballReferenceDB.sdf";
+        public static string DB_NAME = "SchedulePredictor.sdf";
 
         public static void MoveReferenceDatabase()
         {

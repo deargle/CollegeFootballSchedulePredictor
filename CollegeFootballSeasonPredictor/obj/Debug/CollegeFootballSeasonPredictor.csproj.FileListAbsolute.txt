@@ -12,9 +12,10 @@ c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPred
 c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.dll
 c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.pdb
 c:\users\deargle\documents\visual studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\XapCacheFile.xml
-C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\FootballReferenceDB.sdf
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.dll
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\View\ScheduleView.g.i.cs
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\SchedulePredictor.sdf

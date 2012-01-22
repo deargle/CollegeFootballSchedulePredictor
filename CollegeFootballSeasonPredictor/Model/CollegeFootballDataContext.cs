@@ -40,9 +40,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_gameId != value)
                 {
-                    NotifyPropertyChanging("ToDoItemId");
+                    NotifyPropertyChanging("GameId");
                     _gameId = value;
-                    NotifyPropertyChanged("ToDoItemId");
+                    NotifyPropertyChanged("GameId");
                 }
             }
         }
@@ -61,9 +61,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_homeTeam != value)
                 {
-                    NotifyPropertyChanging("homeTeam");
+                    NotifyPropertyChanging("HomeTeam");
                     _homeTeam = value;
-                    NotifyPropertyChanged("homeTeam");
+                    NotifyPropertyChanged("HomeTeam");
                 }
             }
         }
@@ -82,9 +82,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_awayTeam != value)
                 {
-                    NotifyPropertyChanging("awayTeam");
+                    NotifyPropertyChanging("AwayTeam");
                     _awayTeam = value;
-                    NotifyPropertyChanged("awayTeam");
+                    NotifyPropertyChanged("AwayTeam");
                 }
             }
         }
@@ -103,9 +103,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_gameDate != value)
                 {
-                    NotifyPropertyChanging("gameDate");
+                    NotifyPropertyChanging("GameDate");
                     _gameDate = value;
-                    NotifyPropertyChanged("gameDate");
+                    NotifyPropertyChanged("GameDate");
                 }
             }
         }
@@ -123,9 +123,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_confidence != value)
                 {
-                    NotifyPropertyChanging("confidence");
+                    NotifyPropertyChanging("Confidence");
                     _confidence = value;
-                    NotifyPropertyChanged("confidence");
+                    NotifyPropertyChanged("Confidence");
                 }
             }
         }
@@ -166,7 +166,7 @@ namespace CollegeFootballSeasonPredictor.Model
     }
 
     [Table]
-    public class Team : INotifyPropertyChanged, INotifyPropertyChanging
+    public class Team : INotifyPropertyChanged, INotifyPropertyChanging, IComparable
     {
         // Define ID: private field, public property and database column.
         private int _teamId;
@@ -182,9 +182,9 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_teamId != value)
                 {
-                    NotifyPropertyChanging("teamId");
+                    NotifyPropertyChanging("TeamId");
                     _teamId = value;
-                    NotifyPropertyChanged("teamId");
+                    NotifyPropertyChanged("TeamId");
                 }
             }
         }
@@ -203,12 +203,56 @@ namespace CollegeFootballSeasonPredictor.Model
             {
                 if (_teamName != value)
                 {
-                    NotifyPropertyChanging("teamName");
+                    NotifyPropertyChanging("TeamName");
                     _teamName = value;
-                    NotifyPropertyChanged("teamName");
+                    NotifyPropertyChanged("TeamName");
                 }
             }
         }
+
+        // Define item name: private field, public property and database column.
+        private string _division;
+
+        [Column]
+        public string Division
+        {
+            get
+            {
+                return _division;
+            }
+            set
+            {
+                if (_division != value)
+                {
+                    NotifyPropertyChanging("Division");
+                    _division = value;
+                    NotifyPropertyChanged("Division");
+                }
+            }
+        }
+
+        // Define item name: private field, public property and database column.
+        private string _logoPath;
+
+        [Column]
+        public string LogoPath
+        {
+            get
+            {
+                return _logoPath;
+            }
+            set
+            {
+                if (_logoPath != value)
+                {
+                    NotifyPropertyChanging("LogoPath");
+                    _logoPath = value;
+                    NotifyPropertyChanged("LogoPath");
+                }
+            }
+        }
+
+
 
         // Version column aids update performance.
         [Column(IsVersion = true)]
@@ -243,5 +287,37 @@ namespace CollegeFootballSeasonPredictor.Model
         }
 
         #endregion
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null) return 1;
+
+            Team otherTeam = obj as Team;
+            if (otherTeam != null)
+            {
+                int result = this._teamName.CompareTo(otherTeam.TeamName);
+                return result;
+            }
+            else
+            {
+                throw new ArgumentException("Object is not a Team");
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            Team other = obj as Team;
+            return obj != null && this.TeamName.Equals(other.TeamName);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.TeamName.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return this.TeamName;
+        }
     }
 }
