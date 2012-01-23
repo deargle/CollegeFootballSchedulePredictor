@@ -26,19 +26,15 @@
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
 
-                <CheckBox 
-                    IsChecked="False" 
-                    Grid.Column="0" VerticalAlignment="Top"/>
-
                 <TextBlock 
                     Text="{Binding TeamName}" 
-                    FontSize="{StaticResource PhoneFontSizeLarge}" 
-                    Grid.Column="1" Grid.ColumnSpan="2" 
-                    VerticalAlignment="Top" Margin="-36, 12, 0, 0"/>
+                    FontSize="{StaticResource PhoneFontSizeMedium}" 
+                    Grid.Column="0" Grid.ColumnSpan="2" 
+                    VerticalAlignment="Top"/>
 
                 <Image
                     Grid.Column="3"
-                    Source="/Images/appbar.delete.rest.png"
+                    Source="{Binding LogoPath, StringFormat='/Images/Logos/\{0\}'}"
                     Height="75"
                     Width="75"/>
             </Grid>
