@@ -60,9 +60,21 @@
 
         <!--ContentPanel - place additional content here.-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <controls:Pivot Margin="0, -36, 0, 0">
+            <controls:Pivot Margin="0, -30, 0, 0">
 
-                <controls:PivotItem FontSize="13">
+                <controls:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="40"/>
+                    </DataTemplate>
+                </controls:Pivot.HeaderTemplate>
+                <controls:PivotItem Header="Intro">
+                    <TextBlock Text=
+                                "Season Predictor factors in team statistics with your confidence to predict who wins every match. Simply follow the easy steps below!&#13;&#13;1) Select a team from the NCAA&#13;&#13;2) Analyze each match and move the slider towards the team you know will win&#13;&#13;Now you know, so get moving!"
+                               TextWrapping="Wrap"
+                               FontSize="25"></TextBlock>  
+                
+                </controls:PivotItem>
+                <controls:PivotItem Header="Pick Your Team">
                     <ListBox 
                         x:Name="teamsListBox" 
                         ItemsSource="{Binding AllTeams}" 
@@ -78,7 +90,6 @@
                         Margin="12, 0, 12, 0" Width="440" 
                         ItemTemplate="{StaticResource ToDoListBoxItemTemplate}" />
                 </controls:PivotItem-->
-
             </controls:Pivot>
         </Grid>
     </Grid>
