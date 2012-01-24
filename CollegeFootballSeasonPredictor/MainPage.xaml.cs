@@ -58,8 +58,10 @@ namespace CollegeFootballSeasonPredictor
 
             App.ScheduleViewModel.SelectedTeam = (Team)teamsListBox.SelectedItem;
             NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
 
             teamsListBox.SelectedIndex = -1;
         }
+
     }
 }

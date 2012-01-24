@@ -9,21 +9,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-
 using CollegeFootballSeasonPredictor.Model;
 
 namespace CollegeFootballSeasonPredictor.View
 {
     public partial class ScheduleView : PhoneApplicationPage
     {
-        public ScheduleView(Team userSelectedTeam)
+        public ScheduleView()
         {
             InitializeComponent();
 
-            //  TODO: construct a new GameViewModel, passing it the user-selected team
-            //  then, set that view as the data context, like this:
-            //      this.DataContext = new GameViewModel(CollegeFootballSchedulePredictorDataContext.DBConnectionString, userSelectedTeam);
+            this.DataContext = App.ScheduleViewModel;
             //      
         }
     }
