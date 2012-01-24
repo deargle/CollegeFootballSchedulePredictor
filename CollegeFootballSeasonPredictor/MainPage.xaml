@@ -67,7 +67,8 @@
                         x:Name="teamsListBox" 
                         ItemsSource="{Binding AllTeams}" 
                         Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource TeamListBoxItemTemplate}" Height="653" />
+                        ItemTemplate="{StaticResource TeamListBoxItemTemplate}" Height="653"
+                        SelectionChanged="teamsListBox_SelectionChanged"/>
                 </controls:PivotItem>
 
                 <!--controls:PivotItem Header="home">
