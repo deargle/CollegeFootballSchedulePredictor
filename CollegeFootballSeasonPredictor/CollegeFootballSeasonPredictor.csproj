@@ -74,6 +74,9 @@
     <Compile Include="Model\CollegeFootballDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ScheduleViewModel.cs" />
+    <Compile Include="View\PredictionView.xaml.cs">
+      <DependentUpon>PredictionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ScheduleView.xaml.cs">
       <DependentUpon>ScheduleView.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
+    <Page Include="View\PredictionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -362,6 +369,7 @@
     <Content Include="Images\Logos\Youngstown_State.png" />
     <Content Include="Images\appbar.delete.rest.png" />
     <Resource Include="Images\seasonPredict.png" />
+    <Content Include="Images\predict.jpg" />
     <Content Include="SchedulePredictor.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

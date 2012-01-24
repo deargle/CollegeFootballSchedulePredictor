@@ -24,5 +24,18 @@ namespace CollegeFootballSeasonPredictor.View
             this.DataContext = App.ScheduleViewModel;
             //      
         }
+
+        private void teamsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void predict(object sender, EventArgs e)
+        {
+            //algorithm
+            //grab confidence
+            NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+        }
+
     }
 }

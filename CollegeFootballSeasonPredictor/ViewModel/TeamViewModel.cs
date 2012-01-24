@@ -25,6 +25,7 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         //
 
         // All teams.
+        // Return only division A teams
         private ObservableCollection<Team> _allTeams;
         public ObservableCollection<Team> AllTeams
         {
@@ -33,6 +34,17 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             {
                 _allTeams = value;
                 NotifyPropertyChanged("AllTeams");
+            }
+        }
+
+        private ObservableCollection<Team> _aTeams;
+        public ObservableCollection<Team> aTeams
+        {
+            get { return _aTeams; }
+            set
+            {
+                _aTeams = value;
+                NotifyPropertyChanged("ATeams");
             }
         }
 
@@ -46,6 +58,11 @@ namespace CollegeFootballSeasonPredictor.ViewModel
 
             // Query the database and load all to-do items.
             AllTeams = new ObservableCollection<Team>(teamsInDB);
+
+            var aDivisionTeams = from Team team in footballDB.Teams where (team.Division == "A")
+                                 select team;
+
+            aTeams = new ObservableCollection<Team>(aDivisionTeams);
 
             this.IsDataLoaded = true;
         }

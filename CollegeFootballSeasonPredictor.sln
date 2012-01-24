@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010 Express for Windows Phone
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeFootballSeasonPredictor", "CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor.csproj", "{A39F13A1-87FC-4D52-9C0A-61668CD65E38}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMTestApp", "..\MVVMTestApp\MVVMTestApp\MVVMTestApp.csproj", "{097335B3-BF0A-4293-9863-70673F803EE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,6 @@ Global
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{097335B3-BF0A-4293-9863-70673F803EE1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

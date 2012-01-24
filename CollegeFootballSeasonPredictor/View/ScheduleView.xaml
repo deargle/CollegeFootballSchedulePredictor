@@ -10,15 +10,16 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="scheduleGameTemplate">
-
-            <!--<Grid HorizontalAlignment="Stretch" Width="420">
+            <Grid HorizontalAlignment="Stretch" Width="420">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
@@ -26,27 +27,51 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                    <TextBlock 
-                    Text="{Binding TeamName}" 
-                    FontSize="{StaticResource PhoneFontSizeMedium}" 
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    VerticalAlignment="Top"/>
+                <TextBlock 
+                        Text="{Binding HomeTeam.TeamName}" 
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Right"
+                        Grid.Column="1"
+                        Grid.Row="0"/>
+                <TextBlock 
+                        Text="vs" 
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Center"
+                        Grid.Column="2"
+                        Grid.Row="0"/>
+                <TextBlock 
+                        Text="{Binding AwayTeam.TeamName}"
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Left"
+                        Grid.Column="3"
+                        Grid.Row="0"/>
 
-                    <Image
-                    Grid.Column="0"
-                    Source="{Binding SelectedTeam.logoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Grid.Row="0"
-                    Width="75"/>
+                <Image
+                        Grid.Column="0"
+                        Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Grid.Row="0"
+                        Width="75"/>
 
-                    <Image
-                    Grid.Column="3"
-                    Source="{Binding LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Grid.Row="0"
-                    Width="75"/>
-            </Grid>-->
+                <Image
+                        Grid.Column="4"
+                        Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Grid.Row="0"
+                        Width="75"/>
+                <Slider
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Grid.Row="1"
+                        Background="{Binding AwayTeam.Color}"
+                        Foreground="{Binding HomeTeam.Color}"
+                        FlowDirection="LeftToRight"
+                        Value="4.7"
+                        />
+            </Grid>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
@@ -76,275 +101,22 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <!--<ListBox 
-                        x:Name="teamsListBox" 
-                        ItemsSource="{Binding AllTeams}" 
-                        Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource scheduleGameTemplate}" Height="653"
-                        SelectionChanged="teamsListBox_SelectionChanged"/>-->
-
-            <!--Item one Example -->
-            <ListBox>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Arizona State" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/Arizona_State.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#9a0032"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Notre Dame" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/notre-dame-fighting-irish.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#9fba46"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Michigan" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/Michigan.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#004d91"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Colorado State" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/Colorado State.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#018651"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Arizona State" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/Arizona_State.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#9a0032"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-                <Grid HorizontalAlignment="Stretch" Width="420">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="100" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock 
-                        Text="BYU vs Arizona State" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Center"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
-
-                    <Image
-                        Grid.Column="0"
-                        Source="/Images/Logos/Brigham Young.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-
-                    <Image
-                        Grid.Column="3"
-                        Source="/Images/Logos/Arizona_State.png"
-                        Height="75"
-                        Grid.Row="0"
-                        Width="75"/>
-                    <Slider
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        Grid.Row="1"
-                        Background="#9a0032"
-                        Foreground="#004d91"
-                        FlowDirection="LeftToRight"
-                        Value="4.7"
-                        />
-                </Grid>
-            </ListBox>
+            <ListBox 
+                x:Name="teamsListBox" 
+                ItemsSource="{Binding TeamSchedule}" 
+                Margin="12, 0, 12, 0" Width="440" 
+                ItemTemplate="{StaticResource scheduleGameTemplate}" Height="653"
+                SelectionChanged="teamsListBox_SelectionChanged"/>
         </Grid>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/Images/predict.jpg"
+                                            Click="predict"
+                                            Text="Button 1"/>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
