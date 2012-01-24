@@ -72,9 +72,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\CollegeFootballDataContext.cs" />
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ScheduleViewModel.cs" />
     <Compile Include="View\ScheduleView.xaml.cs">
@@ -82,9 +79,6 @@
     </Compile>
     <None Include="Properties\DataSources\CollegeFootballSeasonPredictor.ViewModel.ScheduleViewModel.datasource" />
     <None Include="Properties\DataSources\CollegeFootballSeasonPredictor.ViewModel.TeamViewModel.datasource" />
-    <Compile Include="ViewModel\GameViewModel.cs" />
-    <Compile Include="ViewModel\ItemViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TeamViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,10 +98,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
-    <Page Include="Page1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\ScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
