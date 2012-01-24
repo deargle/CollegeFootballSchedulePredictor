@@ -37,6 +37,24 @@ namespace CollegeFootballSeasonPredictor
             }
         }
 
+        private static ScheduleViewModel _scheduleViewModel = null;
+
+        /// <summary>
+        /// A static ViewModel used by the views to bind against.
+        /// </summary>
+        /// <returns>The MainViewModel object.</returns>
+        public static ScheduleViewModel ScheduleViewModel
+        {
+            get
+            {
+                // Delay creation of the view model until necessary
+                if (_scheduleViewModel == null)
+                    _scheduleViewModel = new ScheduleViewModel(CollegeFootballSchedulePredictorDataContext.DBConnectionString);
+
+                return _scheduleViewModel;
+            }
+        }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

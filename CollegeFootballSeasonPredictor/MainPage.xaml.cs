@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using CollegeFootballSeasonPredictor.Model;
 
 namespace CollegeFootballSeasonPredictor
 {
@@ -49,5 +50,18 @@ namespace CollegeFootballSeasonPredictor
                 App.TeamViewModel.LoadData();
             }
         }
+
+        private void teamsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (teamsListBox.SelectedItem == null)
+                return; // no selection
+
+            App.ScheduleViewModel.SelectedTeam = (Team)teamsListBox.SelectedItem;
+            NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
+
+            teamsListBox.SelectedIndex = -1;
+        }
+
     }
 }

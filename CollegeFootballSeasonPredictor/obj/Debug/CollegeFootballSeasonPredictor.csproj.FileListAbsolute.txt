@@ -17,7 +17,6 @@ C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPred
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml
-C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\View\ScheduleView.g.i.cs
 C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\Bin\Debug\SchedulePredictor.sdf
 C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\CollegeFootballSeasonPredictor\Bin\Debug\ApplicationIcon.png
 C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\CollegeFootballSeasonPredictor\Bin\Debug\Background.png
@@ -40,3 +39,5 @@ C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredi
 C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.dll
 C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\CollegeFootballSeasonPredictor\obj\Debug\CollegeFootballSeasonPredictor.pdb
 C:\Users\Seth\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\CollegeFootballSeasonPredictor\obj\Debug\XapCacheFile.xml
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\Page1.g.i.cs
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor\obj\Debug\View\ScheduleView.g.i.cs

@@ -1,3 +1,5 @@
 * To run this in Visual Studio, you'll need to install the Silverlight for Windows Phone Toolkit. Instructions are on this page, under the same title: http://msdn.microsoft.com/en-us/library/hh286405(v=vs.92).aspx
 
 * The project uses a reference database, which I build with an independent project. I can commit the 'database helper' project if you need it, but it's not required for the main app to run.
+
+* xaml data binding tutorial - http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-6-using-user-controls-to-implement-master-detail-scenarios.aspx
