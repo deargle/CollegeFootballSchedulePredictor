@@ -362,6 +362,7 @@
     <Content Include="Images\Logos\Yale.png" />
     <Content Include="Images\Logos\Youngstown_State.png" />
     <Content Include="Images\appbar.delete.rest.png" />
+    <Resource Include="Images\seasonPredict.png" />
     <Content Include="SchedulePredictor.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

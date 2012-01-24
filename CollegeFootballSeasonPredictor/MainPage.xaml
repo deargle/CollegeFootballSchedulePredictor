@@ -49,23 +49,25 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title.-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock 
-                x:Name="ApplicationTitle" 
-                Text="SCHEDULE PREDICTOR: Choose Team" 
-                Style="{StaticResource PhoneTextNormalStyle}"/>
+        <StackPanel x:Name="TitlePanel" Margin="29,0,-17,45">
+            <Image
+                    Grid.Column="3"
+                    Source="Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
         </StackPanel>
 
         <!--ContentPanel - place additional content here.-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <controls:Pivot Margin="0, -36, 0, 0">
 
-                <controls:PivotItem Header="all">
+                <controls:PivotItem Header="Choose Your Team" FontSize="13">
                     <ListBox 
                         x:Name="allToDoItemsListBox" 
                         ItemsSource="{Binding AllTeams}" 
                         Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource TeamListBoxItemTemplate}" />
+                        ItemTemplate="{StaticResource TeamListBoxItemTemplate}" Height="653" />
                 </controls:PivotItem>
 
                 <!--controls:PivotItem Header="home">
