@@ -27,6 +27,11 @@ namespace CollegeFootballSeasonPredictor.Model
     public class Game : INotifyPropertyChanged, INotifyPropertyChanging
     {
 
+        public Game() : base()
+        {
+            _confidence = .5; // DEFAULT VALUE
+        }
+
         // Define item name: private field, public property and database column.
         [Column(IsPrimaryKey=true)]
         public string HomeTeamName;
@@ -95,9 +100,9 @@ namespace CollegeFootballSeasonPredictor.Model
         }
 
         // Define item name: private field, public property and database column.
-        private string _confidence;
+        private double _confidence;
 
-        public string Confidence
+        public double Confidence
         {
             get
             {
@@ -113,6 +118,25 @@ namespace CollegeFootballSeasonPredictor.Model
                 }
             }
         }
+
+        private Game _winner;
+        public Game Winner
+        {
+            get
+            {
+                return _winner;
+            }
+            set
+            {
+                if (_winner != value)
+                {
+                    NotifyPropertyChanging("Winner");
+                    _winner = value;
+                    NotifyPropertyChanged("Winner");
+                }
+            }
+        }
+
 
         // Version column aids update performance.
         [Column(IsVersion = true)]
@@ -169,6 +193,48 @@ namespace CollegeFootballSeasonPredictor.Model
                     NotifyPropertyChanging("TeamName");
                     _teamName = value;
                     NotifyPropertyChanged("TeamName");
+                }
+            }
+        }
+
+        // Define item name: private field, public property and database column.
+        private string _displayName;
+
+        [Column]
+        public string DisplayName
+        {
+            get
+            {
+                return _displayName;
+            }
+            set
+            {
+                if (_displayName != value)
+                {
+                    NotifyPropertyChanging("DisplayName");
+                    _displayName = value;
+                    NotifyPropertyChanged("DisplayName");
+                }
+            }
+        }
+
+        // Define item name: private field, public property and database column.
+        private string _color;
+
+        [Column]
+        public string Color
+        {
+            get
+            {
+                return _color;
+            }
+            set
+            {
+                if (_color != value)
+                {
+                    NotifyPropertyChanging("Color");
+                    _color = value;
+                    NotifyPropertyChanged("Color");
                 }
             }
         }
