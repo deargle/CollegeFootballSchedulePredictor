@@ -55,8 +55,8 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         {
             // Specify the query for all to-do items in the database.
             var schedule = from Game game in footballDB.Games
-                           where ( game.AwayTeam == team.TeamName
-                           || game.HomeTeam == team.TeamName )
+                           where ( game.AwayTeamName == team.TeamName
+                           || game.HomeTeamName == team.TeamName )
                            select game;
 
             // Query the database and load all to-do items.
