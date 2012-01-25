@@ -26,64 +26,48 @@ namespace CollegeFootballSeasonPredictor.Model
     [Table]
     public class Game : INotifyPropertyChanged, INotifyPropertyChanging
     {
-        // Define ID: private field, public property and database column.
-        private int _gameId;
-
-        [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
-        public int GameId
-        {
-            get
-            {
-                return _gameId;
-            }
-            set
-            {
-                if (_gameId != value)
-                {
-                    NotifyPropertyChanging("GameId");
-                    _gameId = value;
-                    NotifyPropertyChanged("GameId");
-                }
-            }
-        }
 
         // Define item name: private field, public property and database column.
-        private string _homeTeam;
-
-        [Column]
-        public string HomeTeam
+        [Column(IsPrimaryKey=true)]
+        public string HomeTeamName;
+        
+        private EntityRef<Team> _homeTeam;
+        [Association(ThisKey = "HomeTeamName", OtherKey = "TeamName", Storage = "_homeTeam")]
+        public Team HomeTeam
         {
             get
             {
-                return _homeTeam;
+                return this._homeTeam.Entity;
             }
             set
             {
-                if (_homeTeam != value)
+                if (_homeTeam.Entity != value)
                 {
                     NotifyPropertyChanging("HomeTeam");
-                    _homeTeam = value;
+                    _homeTeam.Entity = value;
                     NotifyPropertyChanged("HomeTeam");
                 }
             }
         }
 
         // Define item name: private field, public property and database column.
-        private string _awayTeam;
+        [Column(IsPrimaryKey = true)]
+        public string AwayTeamName;
 
-        [Column]
-        public string AwayTeam
+        private EntityRef<Team> _awayTeam;
+        [Association(ThisKey = "AwayTeamName", OtherKey = "TeamName", Storage = "_awayTeam")]
+        public Team AwayTeam
         {
             get
             {
-                return _awayTeam;
+                return this._awayTeam.Entity;
             }
             set
             {
-                if (_awayTeam != value)
+                if (_awayTeam.Entity != value)
                 {
                     NotifyPropertyChanging("AwayTeam");
-                    _awayTeam = value;
+                    _awayTeam.Entity = value;
                     NotifyPropertyChanged("AwayTeam");
                 }
             }
@@ -168,31 +152,10 @@ namespace CollegeFootballSeasonPredictor.Model
     [Table]
     public class Team : INotifyPropertyChanged, INotifyPropertyChanging, IComparable
     {
-        // Define ID: private field, public property and database column.
-        private int _teamId;
-
-        [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
-        public int TeamId
-        {
-            get
-            {
-                return _teamId;
-            }
-            set
-            {
-                if (_teamId != value)
-                {
-                    NotifyPropertyChanging("TeamId");
-                    _teamId = value;
-                    NotifyPropertyChanged("TeamId");
-                }
-            }
-        }
-
         // Define item name: private field, public property and database column.
         private string _teamName;
 
-        [Column]
+        [Column(IsPrimaryKey = true)]
         public string TeamName
         {
             get
