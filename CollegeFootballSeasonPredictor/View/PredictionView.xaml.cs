@@ -13,9 +13,9 @@ using Microsoft.Phone.Controls;
 
 namespace CollegeFootballSeasonPredictor.View
 {
-    public partial class PanoramaPage1 : PhoneApplicationPage
+    public partial class PredictionView : PhoneApplicationPage
     {
-        public PanoramaPage1()
+        public PredictionView()
         {
             InitializeComponent();
         }
