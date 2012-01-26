@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2010 Express for Windows Phone
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeFootballSeasonPredictor", "CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor.csproj", "{A39F13A1-87FC-4D52-9C0A-61668CD65E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulePredictorDatabaseHelper", "..\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper.csproj", "{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A39F13A1-87FC-4D52-9C0A-61668CD65E38}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

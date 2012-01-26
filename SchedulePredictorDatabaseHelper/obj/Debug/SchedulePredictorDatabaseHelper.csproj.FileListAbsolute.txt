@@ -1,0 +1,15 @@
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\ApplicationIcon.png
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\Background.png
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\SchedulePredictorDatabaseHelper.dll
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\SchedulePredictorDatabaseHelper.pdb
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\AppManifest.xaml
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\SchedulePredictorDatabaseHelper.xap
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\App.g.i.cs
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\MainPage.g.i.cs
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\SchedulePredictorDatabaseHelper.g.resources
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\SchedulePredictorDatabaseHelper.dll
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\SchedulePredictorDatabaseHelper.pdb
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\obj\Debug\XapCacheFile.xml
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\2012-Schedule.csv
+C:\Users\Deargle\Documents\Visual Studio 2010\Projects\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\Bin\Debug\2012-Teams.csv
