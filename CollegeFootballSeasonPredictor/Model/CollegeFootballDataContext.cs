@@ -119,8 +119,8 @@ namespace CollegeFootballSeasonPredictor.Model
             }
         }
 
-        private Game _winner;
-        public Game Winner
+        private Team _winner;
+        public Team Winner
         {
             get
             {

@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Linq;
 
 // Directive for the data model.
+using CollegeFootballSeasonPredictor;
 using CollegeFootballSeasonPredictor.Model;
+using System;
 
 
 namespace CollegeFootballSeasonPredictor.ViewModel
@@ -47,6 +49,61 @@ namespace CollegeFootballSeasonPredictor.ViewModel
                 _selectedTeam = value;
                 LoadSchedule(_selectedTeam);
                 NotifyPropertyChanged("SelectedTeam");
+            }
+        }
+
+        public void SimulateSchedule()
+        {
+            // Reset wins and losses
+            _numWins = 0;
+            _numLosses = 0;
+
+            Predictor predictor = new Predictor();
+            foreach (Game game in this._teamSchedule)
+            {
+                predictor.predict(game);
+                if (game.Winner.Equals(this._selectedTeam))
+                {
+                    _numWins++;
+                }
+                else
+                {
+                    _numLosses++;
+                }
+
+                IsScheduleSimulated = true;
+            }
+        }
+
+        public bool IsScheduleSimulated
+        {
+            get;
+            private set;
+        }
+
+        private int _numWins;
+        public int NumWins
+        {
+            get
+            {
+                if (!IsScheduleSimulated)
+                {
+                    throw new Exception("Schedule not yet simulated!");
+                }
+                return _numWins;
+            }
+        }
+
+        private int _numLosses;
+        public int NumLosses
+        {
+            get
+            {
+                if (!IsScheduleSimulated)
+                {
+                    throw new Exception("Schedule not yet simulated!");
+                }
+                return _numLosses;
             }
         }
 

@@ -12,6 +12,8 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using CollegeFootballSeasonPredictor.Model;
+using CollegeFootballSeasonPredictor.ViewModel;
+using System.Collections.ObjectModel;
 
 namespace CollegeFootballSeasonPredictor.View
 {
@@ -21,8 +23,7 @@ namespace CollegeFootballSeasonPredictor.View
         {
             InitializeComponent();
 
-            this.DataContext = App.ScheduleViewModel;
-            //      
+            this.DataContext = App.ScheduleViewModel;     
         }
 
         private void teamsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -32,8 +33,10 @@ namespace CollegeFootballSeasonPredictor.View
 
         private void predict(object sender, EventArgs e)
         {
-            //algorithm
-            //grab confidence
+            App.ScheduleViewModel.SimulateSchedule();
+
+            ScheduleViewModel s = App.ScheduleViewModel;
+            ObservableCollection<Game> m = App.ScheduleViewModel.TeamSchedule;
             NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
         }
 
