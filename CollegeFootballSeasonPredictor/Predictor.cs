@@ -1,4 +1,6 @@
 ﻿using CollegeFootballSeasonPredictor.Model;
+using System;
+
 
 namespace CollegeFootballSeasonPredictor
 {
@@ -12,7 +14,26 @@ namespace CollegeFootballSeasonPredictor
         }
         public void predict(Game game)
         {
-            game.Winner = game.HomeTeam;
+          
+            Random rand = new Random();
+            double random = rand.Next();
+            
+            if (random <= game.Confidence)
+            {
+                game.Winner = _userSelectedTeam;
+            }
+            else{
+                if (_userSelectedTeam == game.HomeTeam)
+                {
+                    game.Winner = game.AwayTeam;
+                }
+                else{
+                    game.Winner = game.HomeTeam;
+                }
+        }
+
+            
+            
         }
     
     }
