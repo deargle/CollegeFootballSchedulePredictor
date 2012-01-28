@@ -6,14 +6,17 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:CollegeFootballSeasonPredictor.View" 
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
+    
 
     <phone:PhoneApplicationPage.Resources>
+        <local:DateTimeConverter x:Key="DateTimeConverter" />
         <DataTemplate x:Key="scheduleGameTemplate">
             <Grid HorizontalAlignment="Stretch" Width="420">
                 <Grid.ColumnDefinitions>
@@ -50,7 +53,7 @@
                         Grid.Column="3"
                         Grid.Row="0"/>
                 <TextBlock 
-                        Text="{Binding GameDate }"
+                        Text="{Binding GameDate, Converter={StaticResource DateTimeConverter}}"
                         FontSize="{StaticResource PhoneFontSizeMedium}"
                         VerticalAlignment="Center"
                         TextAlignment="Center"
@@ -100,7 +103,7 @@
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="29,0,-17,45">
             <Image
                     Grid.Column="3"
-                    Source="Images/seasonPredict.png"
+                    Source="/Images/seasonPredict.png"
                     Height="100"
                     Width="470"
                     />

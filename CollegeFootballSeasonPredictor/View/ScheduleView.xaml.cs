@@ -14,6 +14,8 @@ using Microsoft.Phone.Controls;
 using CollegeFootballSeasonPredictor.Model;
 using CollegeFootballSeasonPredictor.ViewModel;
 using System.Collections.ObjectModel;
+using System.Windows.Data;
+using System.Globalization;
 
 namespace CollegeFootballSeasonPredictor.View
 {
@@ -38,6 +40,27 @@ namespace CollegeFootballSeasonPredictor.View
             ScheduleViewModel s = App.ScheduleViewModel;
             ObservableCollection<Game> m = App.ScheduleViewModel.TeamSchedule;
             NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+        }
+
+    }
+
+    public class DateTimeConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            DateTime date = DateTime.Parse((string)value);
+            return date.ToShortDateString();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string strValue = value.ToString();
+            DateTime resultDateTime;
+            if (DateTime.TryParse(strValue, out resultDateTime))
+            {
+                return resultDateTime;
+            }
+            return value;
         }
 
     }
