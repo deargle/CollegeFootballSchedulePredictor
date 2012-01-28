@@ -9,23 +9,105 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
-    FontSize="{StaticResource PhoneFontSizeNormal}"
+    FontSize="{StaticResource PhoneFontSizeSmall}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="resultTemplate">
+            <Grid HorizontalAlignment="Stretch" Width="420">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                <TextBlock 
+                        Text="=" 
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Right"
+                        Grid.Column="2"
+                        Grid.Row="0"/>
+                <Image
+                        Grid.Column="0"
+                        Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Grid.Row="0"
+                        Width="75"/>
+
+                <Image
+                        Grid.Column="3"
+                        Source="{Binding Winner.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Grid.Row="0"
+                        Width="75"/>
+                
+                <Image
+                        Grid.Column="1"
+                        Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Grid.Row="0"
+                        Width="75"/>
+            </Grid>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="my application">
+        <controls:Panorama Title="{Binding SelectedTeam.DisplayName}">
 
             <!--Panorama item one-->
-            <controls:PanoramaItem Header="item1">
-                <Grid/>
+            <controls:PanoramaItem Header="Summary">
+                <Grid></Grid>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
-            <controls:PanoramaItem Header="item2">
-                <Grid/>
+            <controls:PanoramaItem Header="Game Breakdown">
+                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                    <Grid HorizontalAlignment="Stretch" Width="420">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock 
+                            Text="Home" 
+                            FontSize="{StaticResource PhoneFontSizeMedium}"
+                            VerticalAlignment="Center"
+                            TextAlignment="Center"
+                            Grid.Column="0"
+                            Grid.Row="1"/>
+                        <TextBlock 
+                            Text="Away" 
+                            FontSize="{StaticResource PhoneFontSizeMedium}"
+                            VerticalAlignment="Center"
+                            TextAlignment="Center"
+                            Grid.Column="1"
+                            Grid.Row="1"/>
+                        <TextBlock 
+                            Text="Winner" 
+                            FontSize="{StaticResource PhoneFontSizeMedium}"
+                            VerticalAlignment="Center"
+                            TextAlignment="Center"
+                            Grid.Column="3"
+                            Grid.Row="1"
+                            />
+                    </Grid>
+                    <ListBox 
+                        x:Name="teamsListBox" 
+                        ItemsSource="{Binding TeamSchedule}" 
+                        Margin="12,70,12,0" Width="440" 
+                        ItemTemplate="{StaticResource resultTemplate}" Height="428" />
+                </Grid>
             </controls:PanoramaItem>
         </controls:Panorama>
     </Grid>
