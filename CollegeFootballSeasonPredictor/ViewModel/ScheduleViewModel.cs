@@ -58,7 +58,7 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             _numWins = 0;
             _numLosses = 0;
 
-            Predictor predictor = new Predictor();
+            Predictor predictor = new Predictor(this._selectedTeam);
             foreach (Game game in this._teamSchedule)
             {
                 predictor.predict(game);
