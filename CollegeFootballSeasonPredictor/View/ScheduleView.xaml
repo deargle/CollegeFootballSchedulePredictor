@@ -22,7 +22,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="40" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
@@ -103,13 +103,14 @@
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="29,0,-17,45">
             <Image
                     Grid.Column="3"
-                    Source="/Images/seasonPredict.png"
+                    Source="Images/seasonPredict.png"
                     Height="100"
                     Width="470"
                     />
             <TextBlock x:Name="PageTitle"
                        Margin="9,-7,0,0" 
-                       Style="{StaticResource PhoneTextTitle1Style}" 
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       VerticalAlignment="Center"
                        Text="{Binding SelectedTeam.TeamName}"
                        FontSize="40"
                        />
@@ -117,7 +118,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ItemsControl 
+            <ListBox
                 x:Name="teamsListBox" 
                 ItemsSource="{Binding TeamSchedule}" 
                 Margin="12,0" Width="440" 
@@ -128,9 +129,9 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/predict.jpg"
+            <shell:ApplicationBarIconButton IconUri="/Images/PredictButton.png"
                                             Click="predict"
-                                            Text="Button 1"/>
+                                            Text="Predict"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 
