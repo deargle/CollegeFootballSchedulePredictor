@@ -16,24 +16,27 @@ namespace CollegeFootballSeasonPredictor
         {
           
             Random rand = new Random();
-            double random = rand.Next();
+            double random = rand.NextDouble();
             
-            if (random <= game.Confidence)
+            // If the SelectedTeam is the HomeTeam, we need to reverse the confidence, because if they
+            // move the slider towards the home team, then that signifies that they think that
+            // that team will win, whereas the confidence, unreversed, would indicate the opposite.
+            double _convertedConfidence;
+
+            _convertedConfidence = _userSelectedTeam == game.HomeTeam ? 
+                1 - game.Confidence : game.Confidence;
+            
+            if (random <= _convertedConfidence)
             {
                 game.Winner = _userSelectedTeam;
             }
-            else{
-                if (_userSelectedTeam == game.HomeTeam)
-                {
-                    game.Winner = game.AwayTeam;
-                }
-                else{
-                    game.Winner = game.HomeTeam;
-                }
-        }
+            else
+            {
+                game.Winner = _userSelectedTeam == game.HomeTeam ? 
+                    game.AwayTeam : game.HomeTeam;
+            }
 
-            
-            
+            Team winner = game.Winner;
         }
     
     }
