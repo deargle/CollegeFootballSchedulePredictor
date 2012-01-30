@@ -23,8 +23,7 @@ namespace CollegeFootballSeasonPredictor
             // that team will win, whereas the confidence, unreversed, would indicate the opposite.
             double _convertedConfidence;
 
-            _convertedConfidence = _userSelectedTeam == game.HomeTeam ? 
-                1 - game.Confidence : game.Confidence;
+            _convertedConfidence = _userSelectedTeam.Equals(game.HomeTeam) ? 1 - game.Confidence : game.Confidence;
             
             if (random <= _convertedConfidence)
             {
@@ -32,8 +31,7 @@ namespace CollegeFootballSeasonPredictor
             }
             else
             {
-                game.Winner = _userSelectedTeam == game.HomeTeam ? 
-                    game.AwayTeam : game.HomeTeam;
+                game.Winner = ( _userSelectedTeam.Equals(game.HomeTeam) ? game.AwayTeam : game.HomeTeam );
             }
 
             Team winner = game.Winner;

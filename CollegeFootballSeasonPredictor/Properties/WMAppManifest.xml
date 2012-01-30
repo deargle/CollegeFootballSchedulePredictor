@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{49aedcfa-d3f0-46da-8c0a-525456dd3fa6}" Title="Football Predictor" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CollegeFootballSeasonPredictor author" Description="Sample description" Publisher="CollegeFootballSeasonPredictor">
-    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{49aedcfa-d3f0-46da-8c0a-525456dd3fa6}" Title="NCAA FB Predictor" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CollegeFootballSeasonPredictor author" Description="Sample description" Publisher="CollegeFootballSeasonPredictor">
+    <IconPath IsRelative="true" IsResource="false">smallPhoneAppTile.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -24,9 +24,9 @@
     <Tokens>
       <PrimaryToken TokenID="CollegeFootballSeasonPredictorToken" TaskName="_default">
         <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">largePhoneAppTile.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Football Predictor</Title>
+          <Title>NCAA FB Predict</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

@@ -1,0 +1,20 @@
+TODO
+
+App Name (Marketplace):
+College Football Season Predictor 2012
+
+App Name (Device):
+NCAA FB Predictor
+
+Detailed Description:
+How much confidence to you have in your team? Pick your favorite Division A College Football Team and assign a confidence level to each scheduled game. Once you've made your picks let the NCAA Football Predictor do the simulation. Once its finished review the results to see how your team will do in the coming year. Didn't like the results? Adjust your confidence levels and run NCAA Football Predictor again and again!
+
+Keywords:
+College, Football, Season, Prediction, FBS
+
+
+(3) Submit your application to the United States Windows Phone 7 marketplace to be certified. Entries 
+must be certified before the deadline which, on average, takes 5 days.
+
+(4) Complete a competition entry form for each application submitted by filling out the following 
+survey: http://www.surveymonkey.com/s/RHL6TPT

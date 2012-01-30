@@ -122,258 +122,765 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Logos\defaultLogo.jpg" />
-    <Content Include="Images\Logos\Air_Force.png" />
-    <Content Include="Images\Logos\Akron.png" />
-    <Content Include="Images\Logos\Alabama.png" />
-    <Content Include="Images\Logos\Alabama_A&amp;M.png" />
-    <Content Include="Images\Logos\Alabama_State.png" />
-    <Content Include="Images\Logos\Albany.png" />
-    <Content Include="Images\Logos\Alcorn_State.png" />
-    <Content Include="Images\Logos\Appalachian_State.png" />
-    <Content Include="Images\Logos\Arizona.png" />
-    <Content Include="Images\Logos\Arizona_State.png" />
-    <Content Include="Images\Logos\Arkansas-Pine_Bluff.png" />
-    <Content Include="Images\Logos\Arkansas.png" />
-    <Content Include="Images\Logos\Arkansas_State.png" />
-    <Content Include="Images\Logos\Army.png" />
-    <Content Include="Images\Logos\Auburn.png" />
-    <Content Include="Images\Logos\Austin_Peay.png" />
-    <Content Include="Images\Logos\Ball_State.png" />
-    <Content Include="Images\Logos\Baylor.png" />
-    <Content Include="Images\Logos\Bethune-Cookman.png" />
-    <Content Include="Images\Logos\Boise_State.png" />
-    <Content Include="Images\Logos\Boston College.png" />
-    <Content Include="Images\Logos\Bowling_Green.png" />
-    <Content Include="Images\Logos\Brigham Young.png" />
-    <Content Include="Images\Logos\Brown.png" />
-    <Content Include="Images\Logos\Bryant_University.png" />
-    <Content Include="Images\Logos\Bucknell.png" />
-    <Content Include="Images\Logos\Buffalo.png" />
-    <Content Include="Images\Logos\Butler.png" />
-    <Content Include="Images\Logos\California.png" />
-    <Content Include="Images\Logos\Cal_Poly.png" />
-    <Content Include="Images\Logos\Campbell.png" />
-    <Content Include="Images\Logos\Central_Arkansas.png" />
-    <Content Include="Images\Logos\Central_Connecticut_State.png" />
-    <Content Include="Images\Logos\Central_Michigan.png" />
-    <Content Include="Images\Logos\Charleston_Southern.png" />
-    <Content Include="Images\Logos\Chattanooga.png" />
-    <Content Include="Images\Logos\Cincinnati.png" />
-    <Content Include="Images\Logos\Citadel.png" />
-    <Content Include="Images\Logos\Clemson.png" />
-    <Content Include="Images\Logos\Coastal_Carolina.png" />
-    <Content Include="Images\Logos\Colgate.png" />
-    <Content Include="Images\Logos\Colorado State.png" />
-    <Content Include="Images\Logos\Colorado.png" />
-    <Content Include="Images\Logos\Columbia.png" />
-    <Content Include="Images\Logos\Connecticut.png" />
-    <Content Include="Images\Logos\Cornell.png" />
-    <Content Include="Images\Logos\Dartmouth.png" />
-    <Content Include="Images\Logos\Davidson.png" />
-    <Content Include="Images\Logos\Dayton.png" />
-    <Content Include="Images\Logos\Delaware.png" />
-    <Content Include="Images\Logos\Delaware_State.png" />
-    <Content Include="Images\Logos\Drake.png" />
-    <Content Include="Images\Logos\Duke.png" />
-    <Content Include="Images\Logos\Duquesne.png" />
-    <Content Include="Images\Logos\Eastern Michigan.png" />
-    <Content Include="Images\Logos\Eastern_Illinois.png" />
-    <Content Include="Images\Logos\Eastern_Kentucky.png" />
-    <Content Include="Images\Logos\Eastern_Washington.png" />
-    <Content Include="Images\Logos\East_Carolina.png" />
-    <Content Include="Images\Logos\Elon.png" />
-    <Content Include="Images\Logos\Florida.png" />
-    <Content Include="Images\Logos\Florida_A&amp;M.png" />
-    <Content Include="Images\Logos\Florida_Atlantic.png" />
-    <Content Include="Images\Logos\Florida_International.png" />
-    <Content Include="Images\Logos\Florida_State.png" />
-    <Content Include="Images\Logos\Fordham.png" />
-    <Content Include="Images\Logos\Fresno_State.png" />
-    <Content Include="Images\Logos\Furman.png" />
-    <Content Include="Images\Logos\Gardner-Webb.png" />
-    <Content Include="Images\Logos\Georgetown.png" />
-    <Content Include="Images\Logos\Georgia.png" />
-    <Content Include="Images\Logos\Georgia_Southern.png" />
-    <Content Include="Images\Logos\Georgia_State.png" />
-    <Content Include="Images\Logos\Georgia_Tech.png" />
-    <Content Include="Images\Logos\Grambling_State.png" />
-    <Content Include="Images\Logos\Hampton.png" />
-    <Content Include="Images\Logos\Harvard.png" />
-    <Content Include="Images\Logos\Hawaii.png" />
-    <Content Include="Images\Logos\Holy_Cross.png" />
-    <Content Include="Images\Logos\Houston.png" />
-    <Content Include="Images\Logos\Howard.png" />
-    <Content Include="Images\Logos\Idaho.png" />
-    <Content Include="Images\Logos\Idaho_State.png" />
-    <Content Include="Images\Logos\Illinois.png" />
-    <Content Include="Images\Logos\Illinois_State.png" />
-    <Content Include="Images\Logos\Indiana.png" />
-    <Content Include="Images\Logos\Indiana_State.png" />
-    <Content Include="Images\Logos\Iowa.png" />
-    <Content Include="Images\Logos\Iowa_State.png" />
-    <Content Include="Images\Logos\Jacksonville.png" />
-    <Content Include="Images\Logos\Jacksonville_State.png" />
-    <Content Include="Images\Logos\Jackson_State.png" />
-    <Content Include="Images\Logos\James_Madison.png" />
-    <Content Include="Images\Logos\Kansas.png" />
-    <Content Include="Images\Logos\Kansas_State.png" />
-    <Content Include="Images\Logos\Kentucky.png" />
-    <Content Include="Images\Logos\Kent_State.png" />
-    <Content Include="Images\Logos\Lafayette.png" />
-    <Content Include="Images\Logos\Lamar.png" />
-    <Content Include="Images\Logos\Lehigh.png" />
-    <Content Include="Images\Logos\Liberty.png" />
-    <Content Include="Images\Logos\Louisiana-Lafayette.png" />
-    <Content Include="Images\Logos\Louisiana-Monroe.png" />
-    <Content Include="Images\Logos\Louisiana_Tech.png" />
-    <Content Include="Images\Logos\Louisville.png" />
-    <Content Include="Images\Logos\LSU.png" />
-    <Content Include="Images\Logos\Maine.png" />
-    <Content Include="Images\Logos\Marist.png" />
-    <Content Include="Images\Logos\Marshall.png" />
-    <Content Include="Images\Logos\Maryland.png" />
-    <Content Include="Images\Logos\Massachusetts.png" />
-    <Content Include="Images\Logos\McNeese_State.png" />
-    <Content Include="Images\Logos\Memphis.png" />
-    <Content Include="Images\Logos\Miami_%28FL%29.png" />
-    <Content Include="Images\Logos\Miami_%28OH%29.png" />
-    <Content Include="Images\Logos\Michigan.png" />
-    <Content Include="Images\Logos\Michigan_State.png" />
-    <Content Include="Images\Logos\Middle_Tennessee.png" />
-    <Content Include="Images\Logos\Minnesota.png" />
-    <Content Include="Images\Logos\Mississippi_State.png" />
-    <Content Include="Images\Logos\Mississippi_Valley_State.png" />
-    <Content Include="Images\Logos\Missouri.png" />
-    <Content Include="Images\Logos\Missouri_State.png" />
-    <Content Include="Images\Logos\Monmouth.png" />
-    <Content Include="Images\Logos\Montana.png" />
-    <Content Include="Images\Logos\Montana_State.png" />
-    <Content Include="Images\Logos\Morehead_State.png" />
-    <Content Include="Images\Logos\Morgan_State.png" />
-    <Content Include="Images\Logos\Murray_State.png" />
-    <Content Include="Images\Logos\Navy.png" />
-    <Content Include="Images\Logos\Nebraska.png" />
-    <Content Include="Images\Logos\Nevada.png" />
-    <Content Include="Images\Logos\New_Hampshire.png" />
-    <Content Include="Images\Logos\New_Mexico.png" />
-    <Content Include="Images\Logos\New_Mexico_State.png" />
-    <Content Include="Images\Logos\Nicholls_State.png" />
-    <Content Include="Images\Logos\Norfolk_State.png" />
-    <Content Include="Images\Logos\Northern_Arizona.png" />
-    <Content Include="Images\Logos\Northern_Colorado.png" />
-    <Content Include="Images\Logos\Northern_Illinois.png" />
-    <Content Include="Images\Logos\Northern_Iowa.png" />
-    <Content Include="Images\Logos\Northwestern.png" />
-    <Content Include="Images\Logos\Northwestern_State.png" />
-    <Content Include="Images\Logos\North_Carolina.png" />
-    <Content Include="Images\Logos\North_Carolina_A&amp;T.png" />
-    <Content Include="Images\Logos\North_Carolina_Central.png" />
-    <Content Include="Images\Logos\North_Carolina_State.png" />
-    <Content Include="Images\Logos\North_Dakota.png" />
-    <Content Include="Images\Logos\North_Dakota_State.png" />
-    <Content Include="Images\Logos\North_Texas.png" />
-    <Content Include="Images\Logos\notre-dame-fighting-irish.png" />
-    <Content Include="Images\Logos\Ohio.png" />
-    <Content Include="Images\Logos\Ohio_State.png" />
-    <Content Include="Images\Logos\Oklahoma.png" />
-    <Content Include="Images\Logos\Oklahoma_State.png" />
-    <Content Include="Images\Logos\Old_Dominion.png" />
-    <Content Include="Images\Logos\Ole_Miss.png" />
-    <Content Include="Images\Logos\Oregon.png" />
-    <Content Include="Images\Logos\Oregon_State.png" />
-    <Content Include="Images\Logos\Pennsylvania.png" />
-    <Content Include="Images\Logos\Penn_State.png" />
-    <Content Include="Images\Logos\Pittsburgh.png" />
-    <Content Include="Images\Logos\Portland_State.png" />
-    <Content Include="Images\Logos\Prairie_View_A&amp;M.png" />
-    <Content Include="Images\Logos\Presbyterian.png" />
-    <Content Include="Images\Logos\Princeton.png" />
-    <Content Include="Images\Logos\Purdue.png" />
-    <Content Include="Images\Logos\Rhode_Island.png" />
-    <Content Include="Images\Logos\Rice.png" />
-    <Content Include="Images\Logos\Richmond.png" />
-    <Content Include="Images\Logos\Robert_Morris.png" />
-    <Content Include="Images\Logos\Rutgers.png" />
-    <Content Include="Images\Logos\Sacramento_State.png" />
-    <Content Include="Images\Logos\Sacred_Heart.png" />
-    <Content Include="Images\Logos\Samford.png" />
-    <Content Include="Images\Logos\Sam_Houston_State.png" />
-    <Content Include="Images\Logos\San_Diego.png" />
-    <Content Include="Images\Logos\San_Diego_State.png" />
-    <Content Include="Images\Logos\San_Jose_State.png" />
-    <Content Include="Images\Logos\Savannah_State.png" />
-    <Content Include="Images\Logos\Southeastern_Louisiana.png" />
-    <Content Include="Images\Logos\Southeast_Missouri_State.png" />
-    <Content Include="Images\Logos\Southern_Illinois.png" />
-    <Content Include="Images\Logos\Southern_Methodist.png" />
-    <Content Include="Images\Logos\Southern_Miss.png" />
-    <Content Include="Images\Logos\Southern_University.png" />
-    <Content Include="Images\Logos\Southern_Utah.png" />
-    <Content Include="Images\Logos\South_Alabama.png" />
-    <Content Include="Images\Logos\South_Carolina.png" />
-    <Content Include="Images\Logos\South_Carolina_State.png" />
-    <Content Include="Images\Logos\South_Dakota.png" />
-    <Content Include="Images\Logos\South_Dakota_State.png" />
-    <Content Include="Images\Logos\South_Florida.png" />
-    <Content Include="Images\Logos\Stanford.png" />
-    <Content Include="Images\Logos\Stephen_F__Austin.png" />
-    <Content Include="Images\Logos\Stony_Brook.png" />
-    <Content Include="Images\Logos\St__Francis_%28PA%29.png" />
-    <Content Include="Images\Logos\Syracuse.png" />
-    <Content Include="Images\Logos\TCU.png" />
-    <Content Include="Images\Logos\Temple.png" />
-    <Content Include="Images\Logos\Tennessee-Martin.png" />
-    <Content Include="Images\Logos\Tennessee.png" />
-    <Content Include="Images\Logos\Tennessee_State.png" />
-    <Content Include="Images\Logos\Tennessee_Tech.png" />
-    <Content Include="Images\Logos\Texas.png" />
-    <Content Include="Images\Logos\Texas_A&amp;M.png" />
-    <Content Include="Images\Logos\Texas_Southern.png" />
-    <Content Include="Images\Logos\Texas_State.png" />
-    <Content Include="Images\Logos\Texas_Tech.png" />
-    <Content Include="Images\Logos\Toledo.png" />
-    <Content Include="Images\Logos\Towson.png" />
-    <Content Include="Images\Logos\Troy.png" />
-    <Content Include="Images\Logos\Tulane.png" />
-    <Content Include="Images\Logos\Tulsa.png" />
-    <Content Include="Images\Logos\UAB.png" />
-    <Content Include="Images\Logos\UCF.png" />
-    <Content Include="Images\Logos\UCLA.png" />
-    <Content Include="Images\Logos\UC_Davis.png" />
-    <Content Include="Images\Logos\UNLV.png" />
-    <Content Include="Images\Logos\USC.png" />
-    <Content Include="Images\Logos\Utah.png" />
-    <Content Include="Images\Logos\Utah_State.png" />
-    <Content Include="Images\Logos\UTEP.png" />
-    <Content Include="Images\Logos\UTSA.png" />
-    <Content Include="Images\Logos\Valparaiso.png" />
-    <Content Include="Images\Logos\Vanderbilt.png" />
-    <Content Include="Images\Logos\Villanova.png" />
-    <Content Include="Images\Logos\Virginia.png" />
-    <Content Include="Images\Logos\Virginia_Military_Institute.png" />
-    <Content Include="Images\Logos\Virginia_Tech.png" />
-    <Content Include="Images\Logos\Wagner.png" />
-    <Content Include="Images\Logos\Wake_Forest.png" />
-    <Content Include="Images\Logos\Washington.png" />
-    <Content Include="Images\Logos\Washington_State.png" />
-    <Content Include="Images\Logos\Weber_State.png" />
-    <Content Include="Images\Logos\Western_Carolina.png" />
-    <Content Include="Images\Logos\Western_Illinois.png" />
-    <Content Include="Images\Logos\Western_Kentucky.png" />
-    <Content Include="Images\Logos\Western_Michigan.png" />
-    <Content Include="Images\Logos\West_Virginia.png" />
-    <Content Include="Images\Logos\William_&amp;_Mary.png" />
-    <Content Include="Images\Logos\Wisconsin.png" />
-    <Content Include="Images\Logos\Wofford.png" />
-    <Content Include="Images\Logos\Wyoming.png" />
-    <Content Include="Images\Logos\Yale.png" />
-    <Content Include="Images\Logos\Youngstown_State.png" />
+    <Content Include="Images\Logos\defaultLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Air_Force.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Akron.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Alabama.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Alabama_A&amp;M.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Alabama_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Albany.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Alcorn_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Appalachian_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Arizona.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Arizona_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Arkansas-Pine_Bluff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Arkansas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Arkansas_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Army.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Auburn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Austin_Peay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Ball_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Baylor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Bethune-Cookman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Boise_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Boston College.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Bowling_Green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Brigham Young.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Brown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Bryant_University.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Bucknell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Buffalo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Butler.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\California.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Cal_Poly.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Campbell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Central_Arkansas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Central_Connecticut_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Central_Michigan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Charleston_Southern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Chattanooga.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Cincinnati.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Citadel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Clemson.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Coastal_Carolina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Colgate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Colorado State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Colorado.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Columbia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Connecticut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Cornell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Dartmouth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Davidson.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Dayton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Delaware.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Delaware_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Drake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Duke.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Duquesne.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Eastern Michigan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Eastern_Illinois.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Eastern_Kentucky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Eastern_Washington.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\East_Carolina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Elon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Florida.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Florida_A&amp;M.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Florida_Atlantic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Florida_International.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Florida_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Fordham.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Fresno_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Furman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Gardner-Webb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Georgetown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Georgia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Georgia_Southern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Georgia_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Georgia_Tech.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Grambling_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Hampton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Harvard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Hawaii.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Holy_Cross.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Houston.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Howard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Idaho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Idaho_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Illinois.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Illinois_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Indiana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Indiana_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Iowa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Iowa_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Jacksonville.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Jacksonville_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Jackson_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\James_Madison.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Kansas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Kansas_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Kentucky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Kent_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Lafayette.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Lamar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Lehigh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Liberty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Louisiana-Lafayette.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Louisiana-Monroe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Louisiana_Tech.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Louisville.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\LSU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Maine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Marist.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Marshall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Maryland.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Massachusetts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\McNeese_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Memphis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Miami_%28FL%29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Miami_%28OH%29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Michigan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Michigan_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Middle_Tennessee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Minnesota.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Mississippi_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Mississippi_Valley_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Missouri.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Missouri_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Monmouth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Montana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Montana_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Morehead_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Morgan_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Murray_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Navy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Nebraska.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Nevada.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\New_Hampshire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\New_Mexico.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\New_Mexico_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Nicholls_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Norfolk_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northern_Arizona.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northern_Colorado.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northern_Illinois.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northern_Iowa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northwestern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Northwestern_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Carolina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Carolina_A&amp;T.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Carolina_Central.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Carolina_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Dakota.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Dakota_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\North_Texas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\notre-dame-fighting-irish.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Ohio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Ohio_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Oklahoma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Oklahoma_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Old_Dominion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Ole_Miss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Oregon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Oregon_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Pennsylvania.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Penn_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Pittsburgh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Portland_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Prairie_View_A&amp;M.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Presbyterian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Princeton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Purdue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Rhode_Island.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Rice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Richmond.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Robert_Morris.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Rutgers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Sacramento_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Sacred_Heart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Samford.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Sam_Houston_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\San_Diego.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\San_Diego_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\San_Jose_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Savannah_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southeastern_Louisiana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southeast_Missouri_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southern_Illinois.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southern_Methodist.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southern_Miss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southern_University.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Southern_Utah.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Alabama.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Carolina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Carolina_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Dakota.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Dakota_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\South_Florida.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Stanford.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Stephen_F__Austin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Stony_Brook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\St__Francis_%28PA%29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Syracuse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\TCU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Temple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tennessee-Martin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tennessee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tennessee_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tennessee_Tech.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Texas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Texas_A&amp;M.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Texas_Southern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Texas_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Texas_Tech.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Toledo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Towson.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Troy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tulane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Tulsa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UAB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UCF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UCLA.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UC_Davis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UNLV.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\USC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Utah.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Utah_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UTEP.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\UTSA.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Valparaiso.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Vanderbilt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Villanova.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Virginia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Virginia_Military_Institute.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Virginia_Tech.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Wagner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Wake_Forest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Washington.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Washington_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Weber_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Western_Carolina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Western_Illinois.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Western_Kentucky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Western_Michigan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\West_Virginia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\William_&amp;_Mary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Wisconsin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Wofford.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Wyoming.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Yale.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logos\Youngstown_State.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\appbar.delete.rest.png" />
-    <Resource Include="Images\seasonPredict.png" />
-    <Content Include="Images\predict.jpg" />
+    <Content Include="Images\PredictButton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\seasonPredict.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\predict.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="largePhoneAppTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SchedulePredictor.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="smallPhoneAppTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SplashScreenImage.jpg" />
     <None Include="SplashScreenImage.jpg.bak" />

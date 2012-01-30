@@ -116,7 +116,7 @@
                             Grid.Column="2"
                             Grid.Row="1"/>
                         <TextBlock 
-                            Text="7" 
+                            Text="{Binding TeamSchedule.Count}" 
                             FontSize="{StaticResource PhoneFontSizeMedium}"
                             TextAlignment="Center"
                             Grid.Column="2"

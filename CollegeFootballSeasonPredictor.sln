@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010 Express for Windows Phone
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeFootballSeasonPredictor", "CollegeFootballSeasonPredictor\CollegeFootballSeasonPredictor.csproj", "{A39F13A1-87FC-4D52-9C0A-61668CD65E38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulePredictorDatabaseHelper", "..\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper.csproj", "{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulePredictorDatabaseHelper", "SchedulePredictorDatabaseHelper\SchedulePredictorDatabaseHelper.csproj", "{8D88A4CF-EA8C-41CC-8FF4-9867D4EDFEDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
