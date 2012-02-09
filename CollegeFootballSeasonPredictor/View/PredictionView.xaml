@@ -168,11 +168,13 @@
                             Grid.Row="1"
                             />
                     </Grid>
-                    <ListBox
+                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ItemsControl
                         x:Name="teamsListBox" 
                         ItemsSource="{Binding TeamSchedule}" 
-                        Margin="12,70,12,0" Width="440" 
-                        ItemTemplate="{StaticResource resultTemplate}" Height="428" />
+                        Margin="12,70,12,0"
+                        ItemTemplate="{StaticResource resultTemplate}" />
+                    </ScrollViewer>
                 </Grid>
             </controls:PanoramaItem>
         </controls:Panorama>
