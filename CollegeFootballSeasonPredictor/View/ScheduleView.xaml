@@ -17,6 +17,7 @@
 
     <phone:PhoneApplicationPage.Resources>
         <local:DateTimeConverter x:Key="DateTimeConverter" />
+        <local:ConfidenceConverter x:Key="ConfidenceConverter" />
         <DataTemplate x:Key="scheduleGameTemplate">
             <Grid HorizontalAlignment="Stretch" Width="420">
                 <Grid.ColumnDefinitions>
@@ -27,6 +28,7 @@
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -76,10 +78,24 @@
                         Height="75"
                         Grid.Row="0"
                         Width="75"/>
+                <TextBlock
+                    Name="HomeTeamConfidence"
+                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Home}"
+                    TextAlignment="Left"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    />
+                <TextBlock
+                    Name="AwayTeamConfidence"    
+                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Away}"
+                    TextAlignment="Right"
+                    Grid.Column="4"
+                    Grid.Row="2"
+                    />
                 <Slider
                         Grid.Column="0"
                         Grid.ColumnSpan="5"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         Background="{Binding AwayTeam.Color}"
                         Foreground="{Binding HomeTeam.Color}"
                         FlowDirection="LeftToRight"

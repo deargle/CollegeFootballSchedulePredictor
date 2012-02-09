@@ -64,4 +64,32 @@ namespace CollegeFootballSeasonPredictor.View
         }
 
     }
+
+    public class ConfidenceConverter : IValueConverter
+    {
+        #region IValueConverter Members
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            double confidence = (double)value;
+            string homeOrAway = (string)parameter;
+            switch (homeOrAway)
+            {
+                case "Home":
+                    confidence = 1 - confidence;
+                    break;
+                case "Away":
+                default:
+                    break;
+            }
+            return confidence.ToString("P1", CultureInfo.InvariantCulture);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
 }
