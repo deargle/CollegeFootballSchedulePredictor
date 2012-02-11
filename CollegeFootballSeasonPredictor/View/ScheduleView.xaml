@@ -80,14 +80,14 @@
                         Width="75"/>
                 <TextBlock
                     Name="HomeTeamConfidence"
-                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Home}"
+                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Home, StringFormat=P1}"
                     TextAlignment="Left"
                     Grid.Column="0"
                     Grid.Row="2"
                     />
                 <TextBlock
                     Name="AwayTeamConfidence"    
-                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Away}"
+                    Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Away, StringFormat=P1}"
                     TextAlignment="Right"
                     Grid.Column="4"
                     Grid.Row="2"

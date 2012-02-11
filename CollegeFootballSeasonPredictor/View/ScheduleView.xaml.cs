@@ -82,7 +82,7 @@ namespace CollegeFootballSeasonPredictor.View
                 default:
                     break;
             }
-            return confidence.ToString("P1", CultureInfo.InvariantCulture);
+            return confidence;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
