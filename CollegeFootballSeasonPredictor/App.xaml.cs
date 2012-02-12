@@ -33,7 +33,6 @@ namespace CollegeFootballSeasonPredictor
                 // Delay creation of the view model until necessary
                 if (_teamViewModel == null)
                     _teamViewModel = new TeamViewModel(CollegeFootballSchedulePredictorDataContext.DBConnectionString);
-
                 return _teamViewModel;
             }
         }
@@ -114,14 +113,14 @@ namespace CollegeFootballSeasonPredictor
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            FlurryWP7SDK.Api.StartSession(FLURRY_API_KEY);
+            //FlurryWP7SDK.Api.StartSession(FLURRY_API_KEY);
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            FlurryWP7SDK.Api.StartSession(FLURRY_API_KEY);
+            //FlurryWP7SDK.Api.StartSession(FLURRY_API_KEY);
 
             // Ensure that application state is restored appropriately
             if (!App.TeamViewModel.IsDataLoaded)
