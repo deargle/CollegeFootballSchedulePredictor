@@ -63,22 +63,25 @@ namespace SchedulePredictorDatabaseHelper
             // Create the database if it does not exist.
             using (SchedulePredictorDatabaseHelperDataContext db = new SchedulePredictorDatabaseHelperDataContext(SchedulePredictorDatabaseHelperDataContext.DBConnectionString))
             {
-                if (db.DatabaseExists() == false)
+                if (db.DatabaseExists() == true)
                 {
-                    //Create the database
-                    db.CreateDatabase();
-
-                    CSVParser parser = new CSVParser();
-                    List<string[]> team_csv_data = parser.parseCSV(csv_team_file);
-                    List<string[]> schedule_csv_data = parser.parseCSV(csv_schedule_file);
-
-                    // Populate Teams
-                    db.Teams.InsertAllOnSubmit(parse_teams(team_csv_data));
-                    db.Games.InsertAllOnSubmit(parse_games(schedule_csv_data));
-
-                    // Save to the categories
-                    db.SubmitChanges();
+                    db.DeleteDatabase();
                 }
+                
+                //Create the database
+                db.DeleteDatabase();
+                db.CreateDatabase();
+
+                CSVParser parser = new CSVParser();
+                List<string[]> team_csv_data = parser.parseCSV(csv_team_file);
+                List<string[]> schedule_csv_data = parser.parseCSV(csv_schedule_file);
+
+                // Populate Teams
+                db.Teams.InsertAllOnSubmit(parse_teams(team_csv_data));
+                db.Games.InsertAllOnSubmit(parse_games(schedule_csv_data));
+
+                // Save to the categories
+                db.SubmitChanges();
             }
 
         }
@@ -89,7 +92,9 @@ namespace SchedulePredictorDatabaseHelper
             int i = 0;
             foreach (string[] row in csv_data) {
                 if (i++ == 0) continue; // for header row
-                teams.Add( new Team {TeamName = row[0], DisplayName = row[1], Division = row[2], LogoPath = row[3], Color = row[4]});
+                // if betterLogo, take that one
+                String logoPath = (row[5] != "") ? "BetterLogos/" + row[5] : row[4];
+                teams.Add( new Team {TeamName = row[0], DisplayName = row[1], Division = row[3], LogoPath = logoPath, Color = row[6]});
             }
             
             return teams;
@@ -101,7 +106,7 @@ namespace SchedulePredictorDatabaseHelper
             int i = 0;
             foreach (string[] row in csv_data) {
                 if (i++ == 0) continue; // for header row
-                games.Add(new Game { GameDate = row[0], HomeTeamName = row[1], AwayTeamName = row[2] } );
+                games.Add(new Game { GameDate = DateTime.Parse(row[0]), HomeTeamName = row[1], AwayTeamName = row[2] } );
             }
 
             return games;
