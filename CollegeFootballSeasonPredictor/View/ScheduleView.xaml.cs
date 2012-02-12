@@ -48,7 +48,8 @@ namespace CollegeFootballSeasonPredictor.View
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            DateTime date = DateTime.Parse((string)value);
+            // DateTime date = DateTime.Parse((string)value);
+            DateTime date = (DateTime)value;
             return date.ToShortDateString();
         }
 

@@ -44,32 +44,32 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <TextBlock 
-                        Text="{Binding HomeTeam.TeamName}" 
+                        Text="{Binding HomeTeam.DisplayName}" 
                         FontSize="{StaticResource PhoneFontSizeMedium}"
                         VerticalAlignment="Center"
                         TextAlignment="Center"
                         Grid.Row="0"
                         />
                     <TextBlock 
-                            Text="vs." 
-                            FontSize="{StaticResource PhoneFontSizeMedium}"
-                            VerticalAlignment="Center"
-                            TextAlignment="Center"
-                            Grid.Row="1"
+                        Text="vs." 
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Center"
+                        Grid.Row="1"
                         />
                     <TextBlock 
-                            Text="{Binding AwayTeam.TeamName}" 
-                            FontSize="{StaticResource PhoneFontSizeMedium}"
-                            VerticalAlignment="Center"
-                            TextAlignment="Center"
-                            Grid.Row="2"
+                        Text="{Binding AwayTeam.DisplayName}" 
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Center"
+                        Grid.Row="2"
                         />
                     <TextBlock 
-                            Text="{Binding GameDate, Converter={StaticResource DateTimeConverter}}"
-                            FontSize="{StaticResource PhoneFontSizeMedium}"
-                            VerticalAlignment="Center"
-                            TextAlignment="Center"
-                            Grid.Row="3" 
+                        Text="{Binding GameDate, Converter={StaticResource DateTimeConverter}}"
+                        FontSize="{StaticResource PhoneFontSizeMedium}"
+                        VerticalAlignment="Center"
+                        TextAlignment="Center"
+                        Grid.Row="3" 
                         />
                 </Grid>
                 <Image
@@ -129,18 +129,25 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="29,0,-17,45">
             <Image
-                    Grid.Column="3"
-                    Source="Images/seasonPredict.png"
-                    Height="100"
-                    Width="470"
-                    />
+                Grid.Column="3"
+                Source="Images/seasonPredict.png"
+                Height="100"
+                Width="470"
+                />
             <TextBlock x:Name="PageTitle"
-                       Margin="9,-7,0,0" 
-                       Style="{StaticResource PhoneTextTitle1Style}"
-                       VerticalAlignment="Center"
-                       Text="{Binding SelectedTeam.TeamName}"
-                       FontSize="40"
-                       />
+                Margin="9,-7,0,0" 
+                Style="{StaticResource PhoneTextTitle1Style}"
+                VerticalAlignment="Center"
+                Text="{Binding SelectedTeam.DisplayName}"
+                FontSize="40"
+                />
+            <TextBlock x:Name="Instructions"
+                Margin="9,-7,0,0" 
+                Style="{StaticResource PhoneTextTitle1Style}"
+                VerticalAlignment="Center"
+                Text="move slider towards predicted winner"
+                FontSize="25"
+                />
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
