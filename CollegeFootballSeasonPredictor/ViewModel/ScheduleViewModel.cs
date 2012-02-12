@@ -112,8 +112,9 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         {
             // Specify the query for all to-do items in the database.
             var schedule = from Game game in footballDB.Games
-                           where ( game.AwayTeamName == team.TeamName
-                           || game.HomeTeamName == team.TeamName )
+                           where (game.AwayTeamName == team.TeamName
+                           || game.HomeTeamName == team.TeamName)
+                           orderby game.GameDate
                            select game;
 
             // Query the database and load all to-do items.
@@ -134,4 +135,12 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         }
         #endregion
     }
+}
+
+public class GameDatComparer : IComparer<String>
+{
+        public int Compare(string x, string y)
+        {
+            return DateTime.Parse(x).CompareTo(DateTime.Parse(y));
+        }
 }

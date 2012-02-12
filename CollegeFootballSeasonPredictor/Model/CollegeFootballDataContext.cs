@@ -79,10 +79,10 @@ namespace CollegeFootballSeasonPredictor.Model
         }
 
         // Define item name: private field, public property and database column.
-        private string _gameDate;
+        private DateTime _gameDate;
 
         [Column]
-        public string GameDate
+        public DateTime GameDate
         {
             get
             {
