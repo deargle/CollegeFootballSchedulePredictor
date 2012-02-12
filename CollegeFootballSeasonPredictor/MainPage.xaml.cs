@@ -62,5 +62,10 @@ namespace CollegeFootballSeasonPredictor
             teamsListBox.SelectedIndex = -1;
         }
 
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/About.xaml", UriKind.Relative));
+        }
+
     }
 }

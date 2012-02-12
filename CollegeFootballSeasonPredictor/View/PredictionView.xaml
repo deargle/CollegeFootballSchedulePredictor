@@ -28,18 +28,17 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                 <TextBlock 
-                        Text="=" 
-                        FontSize="{StaticResource PhoneFontSizeMedium}"
-                        VerticalAlignment="Center"
-                        TextAlignment="Right"
-                        Grid.Column="2"
-                        />
+                    Text="=" 
+                    FontSize="{StaticResource PhoneFontSizeMedium}"
+                    VerticalAlignment="Center"
+                    TextAlignment="Right"
+                    Grid.Column="2"
+                    />
                 <Image
-                        Grid.Column="0"
-                        Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                        Height="75"
-                        Width="75"/>
-
+                    Grid.Column="0"
+                    Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                    Height="75"
+                    Width="75"/>
                 <Image
                         Grid.Column="3"
                         Source="{Binding Winner.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
@@ -130,7 +129,7 @@
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
-            <controls:PanoramaItem Header="Game Results">
+            <controls:PanoramaItem Header="Outcome">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>

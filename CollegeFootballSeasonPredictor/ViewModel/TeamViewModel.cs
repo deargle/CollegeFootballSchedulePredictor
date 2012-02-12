@@ -18,6 +18,7 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         public TeamViewModel(string footballDBConnectionString)
         {
             footballDB = new CollegeFootballSchedulePredictorDataContext(footballDBConnectionString);
+            LoadData();
         }
 
         //

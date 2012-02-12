@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"    
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -51,36 +51,22 @@
         <!--TitlePanel contains the name of the application and page title.-->
         <StackPanel x:Name="TitlePanel" Margin="29,0,-17,45">
             <Image
-                    Grid.Column="3"
-                    Source="Images/seasonPredict.png"
-                    Height="100"
-                    Width="470"
-                    />
+                Grid.Column="3"
+                Source="/Images/seasonPredict.png"
+                Height="100"
+                Width="470"
+                />
+            <TextBlock x:Name="ListTitle" Text="Pick Your Team" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here.-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" >
-            <controls:Pivot Margin="0, -30, 0, 0">
-                <controls:Pivot.HeaderTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding}" FontSize="40"/>
-                    </DataTemplate>
-                </controls:Pivot.HeaderTemplate>
-                <controls:PivotItem Header="Intro">
-                    <TextBlock Text=
-                               "Season Predictor factors in team statistics with your confidence to predict who wins every match. Simply follow the easy steps below!&#13;&#13;1) Select a team from the NCAA&#13;&#13;2) Analyze each match and move the slider towards the team you know will win&#13;&#13;Now you know, so get moving!"
-                               TextWrapping="Wrap"
-                               FontSize="25"/>
-                </controls:PivotItem>
-                <controls:PivotItem Header="Pick Your Team">
-                    <ListBox 
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12, -30, 12, 0" Width="440">
+                    <ListBox
                         x:Name="teamsListBox" 
                         ItemsSource="{Binding aTeams}"                        
                         ItemTemplate="{StaticResource TeamListBoxItemTemplate}"
                         SelectionChanged="teamsListBox_SelectionChanged"
                         ScrollViewer.VerticalScrollBarVisibility="Auto" />
-                </controls:PivotItem>
-
                 <!--controls:PivotItem Header="home">
                     <ListBox 
                         x:Name="homeToDoItemsListBox" 
@@ -88,20 +74,17 @@
                         Margin="12, 0, 12, 0" Width="440" 
                         ItemTemplate="{StaticResource ToDoListBoxItemTemplate}" />
                 </controls:PivotItem-->
-            </controls:Pivot>
         </Grid>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="About" Click="AboutButton_Click"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+                <shell:ApplicationBarMenuItem Text="About" Click="AboutButton_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
