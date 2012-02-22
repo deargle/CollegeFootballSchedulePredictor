@@ -136,11 +136,3 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         #endregion
     }
 }
-
-public class GameDatComparer : IComparer<String>
-{
-        public int Compare(string x, string y)
-        {
-            return DateTime.Parse(x).CompareTo(DateTime.Parse(y));
-        }
-}
