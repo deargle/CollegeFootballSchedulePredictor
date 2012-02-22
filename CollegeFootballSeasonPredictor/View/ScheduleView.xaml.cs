@@ -44,28 +44,6 @@ namespace CollegeFootballSeasonPredictor.View
 
     }
 
-    public class DateTimeConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            // DateTime date = DateTime.Parse((string)value);
-            DateTime date = (DateTime)value;
-            return date.ToShortDateString();
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            string strValue = value.ToString();
-            DateTime resultDateTime;
-            if (DateTime.TryParse(strValue, out resultDateTime))
-            {
-                return resultDateTime;
-            }
-            return value;
-        }
-
-    }
-
     public class ConfidenceConverter : IValueConverter
     {
         #region IValueConverter Members

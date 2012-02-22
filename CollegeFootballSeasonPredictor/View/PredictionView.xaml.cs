@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using CollegeFootballSeasonPredictor.Model;
 using System.Windows.Data;
+using Microsoft.Advertising.Mobile.UI;
 
 namespace CollegeFootballSeasonPredictor.View
 {

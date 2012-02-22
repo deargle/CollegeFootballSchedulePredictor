@@ -16,7 +16,6 @@
     
 
     <phone:PhoneApplicationPage.Resources>
-        <local:DateTimeConverter x:Key="DateTimeConverter" />
         <local:ConfidenceConverter x:Key="ConfidenceConverter" />
         <DataTemplate x:Key="scheduleGameTemplate">
             <Grid HorizontalAlignment="Stretch" Width="420">
@@ -65,7 +64,7 @@
                         Grid.Row="2"
                         />
                     <TextBlock 
-                        Text="{Binding GameDate, Converter={StaticResource DateTimeConverter}}"
+                        Text="{Binding GameDate, StringFormat=\{0:d\}}"
                         FontSize="{StaticResource PhoneFontSizeMedium}"
                         VerticalAlignment="Center"
                         TextAlignment="Center"
