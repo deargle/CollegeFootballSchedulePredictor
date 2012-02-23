@@ -67,5 +67,14 @@ namespace CollegeFootballSeasonPredictor
             NavigationService.Navigate(new Uri("/View/About.xaml", UriKind.Relative));
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            while (NavigationService.CanGoBack)
+            {
+                NavigationService.RemoveBackEntry();
+            }
+            base.OnNavigatedTo(e);
+        }
+
     }
 }

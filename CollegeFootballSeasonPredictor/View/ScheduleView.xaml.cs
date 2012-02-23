@@ -16,6 +16,7 @@ using CollegeFootballSeasonPredictor.ViewModel;
 using System.Collections.ObjectModel;
 using System.Windows.Data;
 using System.Globalization;
+using Microsoft.Phone.Shell;
 
 namespace CollegeFootballSeasonPredictor.View
 {
@@ -24,8 +25,6 @@ namespace CollegeFootballSeasonPredictor.View
         public ScheduleView()
         {
             InitializeComponent();
-
-            this.DataContext = App.ScheduleViewModel;     
         }
 
         private void teamsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -33,13 +32,58 @@ namespace CollegeFootballSeasonPredictor.View
 
         }
 
-        private void predict(object sender, EventArgs e)
+        private void PredictButton_Click(object sender, EventArgs e)
         {
             App.ScheduleViewModel.SimulateSchedule();
 
-            ScheduleViewModel s = App.ScheduleViewModel;
-            ObservableCollection<Game> m = App.ScheduleViewModel.TeamSchedule;
             NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/About.xaml", UriKind.Relative));
+        }
+
+        // http://msdn.microsoft.com/en-us/library/hh202979(v=vs.92).aspx
+        private void SaveFavoriteTeamButton_Clicked(object sender, EventArgs e)
+        {
+            Team selectedTeam = App.ScheduleViewModel.SelectedTeam;
+
+            // Look to see whether the Tile already exists and if so, don't try to create it again.
+            ShellTile TileToFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(string.Format("Team={0}",selectedTeam.TeamName)));
+
+            if (TileToFind == null)
+            {
+                // Create the Tile object and set some initial properties for the Tile.
+                // The Count value of 12 shows the number 12 on the front of the Tile. Valid values are 1-99.
+                // A Count value of 0 indicates that the Count should not be displayed.
+                StandardTileData NewTileData = new StandardTileData
+                {
+                    BackgroundImage = new Uri(string.Format("/Images/Logos/{0}", selectedTeam.LogoPath), UriKind.Relative),
+                    Title = "NCAA FB Predict"
+                };
+
+                ShellTile.Create(new Uri(string.Format("/View/ScheduleView.xaml?Team={0}", selectedTeam.TeamName), UriKind.Relative), NewTileData);
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            String selectedTeamName = "";
+            if (this.NavigationContext.QueryString.TryGetValue("Team", out selectedTeamName))
+            {
+                Team selectedTeam = App.TeamViewModel.findByName(selectedTeamName);
+                App.ScheduleViewModel.SelectedTeam = selectedTeam;
+            }
+            // In this case, the selectedTeam should already have been set for the ScheduleViewModel.
+            this.DataContext = App.ScheduleViewModel;
+
+            base.OnNavigatedTo(e);
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
     }

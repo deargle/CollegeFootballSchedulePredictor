@@ -194,8 +194,17 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.back.rest.png" 
+                                            Text="Back" 
+                                            Click="BackButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" 
+                                            Text="About" 
+                                            Click="AboutButton_Click"/>
+            <shell:ApplicationBarIconButton Text="Pin Favorite" 
+                                            IconUri="/Images/MB_0001_pin.png" 
+                                            Click="SaveFavoriteTeamButton_Clicked" />
             <shell:ApplicationBarIconButton IconUri="/Images/PredictButton.png"
-                                            Click="predict"
+                                            Click="PredictButton_Click"
                                             Text="Predict"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

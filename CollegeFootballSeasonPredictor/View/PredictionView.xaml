@@ -8,7 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:CollegeFootballSeasonPredictor.View"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeSmall}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -74,6 +74,9 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="{Binding SelectedTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}" Stretch="UniformToFill" Opacity="0.12"/>
+                        </Grid.Background>
                         <TextBlock 
                                 Text="{Binding SelectedTeam.DisplayName}" 
                                 FontSize="{StaticResource PhoneFontSizeLarge}"
@@ -120,18 +123,18 @@
                                 TextAlignment="Center"
                                 Grid.Column="2"
                                 Grid.Row="2"/>
-                        <Image
+                        <!--Image
                                 Grid.Column="1"
                                 Source="{Binding SelectedTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
                                 Height="75"
                                 Grid.Row="4"
                                 VerticalAlignment="Bottom"
-                                Width="75"/>
+                                Width="75"/-->
                     </Grid>
                 </controls:PanoramaItem>
 
                 <!--Panorama item two-->
-                <controls:PanoramaItem Header="Outcome">
+                <controls:PanoramaItem Header="Outcome" Margin="0,0,0,10">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -170,12 +173,12 @@
                                 Grid.Row="0"
                                 />
                         </Grid>
-                        <ScrollViewer Grid.Row="1" Height="370">
+                        <ScrollViewer Grid.Row="1" Height="350">
                             <ItemsControl
-                            ScrollViewer.VerticalScrollBarVisibility="Visible"
-                            x:Name="teamsListBox" 
-                            ItemsSource="{Binding TeamSchedule}" 
-                            ItemTemplate="{StaticResource resultTemplate}" />
+                                ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                x:Name="teamsListBox" 
+                                ItemsSource="{Binding TeamSchedule}" 
+                                ItemTemplate="{StaticResource resultTemplate}" />
                         </ScrollViewer>
                     </Grid>
                 </controls:PanoramaItem>
@@ -188,5 +191,12 @@
     </Grid>
 
     <!--Panorama-based applications should not show an ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.back.rest.png" Click="BackButton_Click" Text="Back"/>            
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="About" Click="AboutButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/PredictButton.png" Click="PredictButton_Click" Text="Predict"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -32,8 +32,11 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             }
             set
             {
-                _teamSchedule = value;
-                NotifyPropertyChanged("TeamSchedule");
+                if (_teamSchedule != value)
+                {
+                    _teamSchedule = value;
+                    NotifyPropertyChanged("TeamSchedule");
+                }
             }
         }
 
@@ -46,9 +49,13 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             }
             set
             {
-                _selectedTeam = value;
-                LoadSchedule(_selectedTeam);
-                NotifyPropertyChanged("SelectedTeam");
+                Team selectedTeam = (Team)value;
+                if (!selectedTeam.Equals(_selectedTeam))
+                {
+                    _selectedTeam = value;
+                    LoadSchedule(_selectedTeam);
+                    NotifyPropertyChanged("SelectedTeam");
+                }
             }
         }
 

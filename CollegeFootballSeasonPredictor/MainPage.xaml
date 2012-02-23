@@ -79,11 +79,11 @@
 
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="About" Click="AboutButton_Click"/>
-            <shell:ApplicationBar.MenuItems>
+            <!--shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="About" Click="AboutButton_Click"/>
-            </shell:ApplicationBar.MenuItems>
+            </shell:ApplicationBar.MenuItems-->
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

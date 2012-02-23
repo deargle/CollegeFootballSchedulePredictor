@@ -68,6 +68,11 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             this.IsDataLoaded = true;
         }
 
+        public Team findByName(string teamName)
+        {
+            return (from Team team in footballDB.Teams where (team.TeamName == teamName) select team).Single();
+        }
+
         public bool IsDataLoaded
         {
             get;

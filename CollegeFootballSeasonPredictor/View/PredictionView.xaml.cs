@@ -26,6 +26,45 @@ namespace CollegeFootballSeasonPredictor.View
 
             this.DataContext = App.ScheduleViewModel;
         }
+
+        private void PredictButton_Click(object sender, EventArgs e)
+        {
+            App.ScheduleViewModel.SimulateSchedule();
+            DataContext = App.ScheduleViewModel;
+
+            NavigationService.Navigate(new Uri(string.Format("/View/PredictionView.xaml?Refresh=true&random={0}", Guid.NewGuid()), UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/About.xaml", UriKind.Relative));
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            base.OnBackKeyPress(e);
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            string refresh;
+            if (NavigationContext.QueryString.TryGetValue("Refresh", out refresh))
+            {
+                NavigationService.RemoveBackEntry();
+            }
+            base.OnNavigatedTo(e);
+        }
     }
 
     public class GameWinnerConverter : IValueConverter
