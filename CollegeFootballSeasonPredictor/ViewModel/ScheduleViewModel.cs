@@ -7,23 +7,47 @@ using System.Linq;
 using CollegeFootballSeasonPredictor;
 using CollegeFootballSeasonPredictor.Model;
 using System;
+using System.Runtime.Serialization;
 
 
 namespace CollegeFootballSeasonPredictor.ViewModel
 {
+    [DataContractAttribute]
     public class ScheduleViewModel : INotifyPropertyChanged
     {
         // LINQ to SQL data context for the local database.
-        private CollegeFootballSchedulePredictorDataContext footballDB;
+        
+        private CollegeFootballSchedulePredictorDataContext _footballDB;
+        private CollegeFootballSchedulePredictorDataContext footballDB
+        {
+            get
+            {
+                if (_footballDB == null)
+                {
+                    _footballDB = new CollegeFootballSchedulePredictorDataContext(_footballDBConnectionString);
+                    
+                }
+                return _footballDB;
+            }
+            set
+            {
+                _footballDB = value;
+            }
+
+        }
+
+        [DataMember]
+        internal static string _footballDBConnectionString;
 
         // Class constructor, create the data context object.
         public ScheduleViewModel(string footballDBConnectionString)
         {
-            footballDB = new CollegeFootballSchedulePredictorDataContext(footballDBConnectionString);
+            _footballDBConnectionString = footballDBConnectionString;
         }
 
         // TeamSchedule.
         private ObservableCollection<Game> _teamSchedule;
+        [DataMember]
         public ObservableCollection<Game> TeamSchedule
         {
             get 
@@ -41,6 +65,7 @@ namespace CollegeFootballSeasonPredictor.ViewModel
         }
 
         private Team _selectedTeam;
+        [DataMember]
         public Team SelectedTeam
         {
             get 
@@ -82,35 +107,46 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             }
         }
 
+        [DataMember]
         public bool IsScheduleSimulated
         {
             get;
-            private set;
+            internal set;
         }
 
         private int _numWins;
+        [DataMember]
         public int NumWins
         {
             get
             {
                 if (!IsScheduleSimulated)
                 {
-                    throw new Exception("Schedule not yet simulated!");
+                    SimulateSchedule();
                 }
                 return _numWins;
+            }
+            internal set
+            {
+                _numWins = value;
             }
         }
 
         private int _numLosses;
+        [DataMember]
         public int NumLosses
         {
             get
             {
                 if (!IsScheduleSimulated)
                 {
-                    throw new Exception("Schedule not yet simulated!");
+                    SimulateSchedule();
                 }
                 return _numLosses;
+            }
+            internal set
+            {
+                _numLosses = value;
             }
         }
 

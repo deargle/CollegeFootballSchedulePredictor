@@ -1,0 +1,15 @@
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\ApplicationIcon.png
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\Background.png
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\2012-Schedule.csv
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\2012-Teams.csv
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\SchedulePredictorDatabaseHelper.dll
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\SchedulePredictorDatabaseHelper.pdb
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\AppManifest.xaml
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\Bin\Release\SchedulePredictorDatabaseHelper.xap
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\ResolveAssemblyReference.cache
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\App.g.i.cs
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\MainPage.g.i.cs
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\SchedulePredictorDatabaseHelper.g.resources
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\SchedulePredictorDatabaseHelper.dll
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\SchedulePredictorDatabaseHelper.pdb
+C:\Users\deargle\Documents\Visual Studio 2010\Projects\CollegeFootballSchedulePredictor\SchedulePredictorDatabaseHelper\obj\Release\XapCacheFile.xml

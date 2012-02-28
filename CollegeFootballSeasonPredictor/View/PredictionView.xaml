@@ -17,7 +17,7 @@
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="resultTemplate">
-            <Grid HorizontalAlignment="Stretch">
+            <Grid HorizontalAlignment="Stretch" Background="Black">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
@@ -29,26 +29,33 @@
                     </Grid.ColumnDefinitions>
                 <TextBlock 
                     Text="=" 
+                    Foreground="White"
                     FontSize="{StaticResource PhoneFontSizeMedium}"
                     VerticalAlignment="Center"
                     TextAlignment="Right"
                     Grid.Column="2"
                     />
-                <Image
-                    Grid.Column="0"
-                    Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Width="75"/>
-                <Image
-                    Grid.Column="3"
-                    Source="{Binding Winner.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Width="75"/>
-                <Image
-                    Grid.Column="1"
-                    Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Width="75"/>
+                <Border Padding="0,5" Grid.Column="0">
+                    <Image
+                        Grid.Column="0"
+                        Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Width="75"/>
+                </Border>
+                <Border Padding="0,5" Grid.Column="3">
+                    <Image
+                            Grid.Column="3"
+                            Source="{Binding Winner.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                            Height="75"
+                            Width="75"/>
+                </Border>
+                <Border Padding="0,5" Grid.Column="1">
+                        <Image
+                        Grid.Column="1"
+                        Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Width="75"/>
+                    </Border>
             </Grid>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
@@ -174,11 +181,13 @@
                                 />
                         </Grid>
                         <ScrollViewer Grid.Row="1" Height="350">
+                            <Border Padding="0,0,16,0">
                             <ItemsControl
                                 ScrollViewer.VerticalScrollBarVisibility="Visible"
                                 x:Name="teamsListBox" 
                                 ItemsSource="{Binding TeamSchedule}" 
                                 ItemTemplate="{StaticResource resultTemplate}" />
+                            </Border>
                         </ScrollViewer>
                     </Grid>
                 </controls:PanoramaItem>

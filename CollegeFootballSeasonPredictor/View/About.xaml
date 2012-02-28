@@ -22,17 +22,18 @@
         </Grid.RowDefinitions>
         
         <!--TitlePanel contains the name of the application and page title.-->
-        <StackPanel x:Name="TitlePanel" Margin="29,0,-17,45">
+        <StackPanel x:Name="TitlePanel" >
+            <Border Background="Black">
             <Image
-                Grid.Column="3"
-                Source="/Images/seasonPredict.png"
-                Height="100"
-                Width="470"
-                />
+                    Source="/Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
+            </Border>
         </StackPanel>
         
         <!--Pivot Control-->
-        <controls:Pivot Grid.Row="1" Margin="0, -30, 0, 0">
+        <controls:Pivot Grid.Row="1" >
             <controls:Pivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding}" FontSize="40"/>
@@ -43,7 +44,7 @@
                 <TextBlock Text=
                     "Season Predictor factors in team statistics with your confidence to predict who wins every match. Simply follow the easy steps below!&#13;&#13;1) Select a team from the NCAA&#13;&#13;2) Move the slider towards the team you think will win&#13;&#13;Now you know, so get moving!"
                     TextWrapping="Wrap"
-                    FontSize="25"/>
+                    FontSize="25" Margin="12,0,0,0" />
             </controls:PivotItem>
 
             <!--Pivot item two-->
@@ -51,7 +52,8 @@
                 <TextBlock Text=
                     "All team and league information, sports logos, sports uniforms and names contained within this app are properties of their respective leagues, teams, ownership groups and/or organizations."
                     TextWrapping="Wrap"
-                    FontSize="25"/>
+                    FontSize="25"
+                    Margin="12,0,0,0"/>
             </controls:PivotItem>
         </controls:Pivot>
     </Grid>

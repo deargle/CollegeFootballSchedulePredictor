@@ -14,6 +14,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using CollegeFootballSeasonPredictor.Model;
 using CollegeFootballSeasonPredictor.ViewModel;
+using System.IO.IsolatedStorage;
 
 namespace CollegeFootballSeasonPredictor
 {
@@ -49,9 +50,15 @@ namespace CollegeFootballSeasonPredictor
             {
                 // Delay creation of the view model until necessary
                 if (_scheduleViewModel == null)
+                {
                     _scheduleViewModel = new ScheduleViewModel(CollegeFootballSchedulePredictorDataContext.DBConnectionString);
+                }
 
                 return _scheduleViewModel;
+            }
+            private set
+            {
+                _scheduleViewModel = value;
             }
         }
 
@@ -121,11 +128,15 @@ namespace CollegeFootballSeasonPredictor
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             //FlurryWP7SDK.Api.StartSession(FLURRY_API_KEY);
-
             // Ensure that application state is restored appropriately
             if (!App.TeamViewModel.IsDataLoaded)
             {
                 App.TeamViewModel.LoadData();
+            }
+
+            if (PhoneApplicationService.Current.State.ContainsKey("ScheduleViewModel"))
+            {
+                App.ScheduleViewModel = PhoneApplicationService.Current.State["ScheduleViewModel"] as ScheduleViewModel;
             }
         }
 
@@ -134,6 +145,10 @@ namespace CollegeFootballSeasonPredictor
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
             // Ensure that required application state is persisted here.
+            if (_scheduleViewModel != null && _scheduleViewModel.SelectedTeam != null) {
+                PhoneApplicationService.Current.State["ScheduleViewModel"] = App.ScheduleViewModel;
+                // IsolatedStorageSettings.ApplicationSettings["SelectedTeamName"] = App.ScheduleViewModel.SelectedTeam.TeamName;
+            }
         }
 
         // Code to execute when the application is closing (eg, user hit Back)

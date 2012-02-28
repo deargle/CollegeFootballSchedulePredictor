@@ -7,18 +7,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"    
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
-    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+    >
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="TeamListBoxItemTemplate">
 
-            <Grid HorizontalAlignment="Stretch" Width="420">
+            <Grid HorizontalAlignment="Stretch" Width="420" Margin="0,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
@@ -31,12 +31,14 @@
                     FontSize="{StaticResource PhoneFontSizeMedium}" 
                     Grid.Column="0" Grid.ColumnSpan="2" 
                     VerticalAlignment="Center" />
-
-                <Image 
-                    Grid.Column="3"
-                    Source="{Binding LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Height="75"
-                    Width="75"/>
+                <Border Background="Black" Grid.Column="3">
+                    <Image
+                        Margin="0,5"
+                        Grid.Column="3"
+                        Source="{Binding LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Height="75"
+                        Width="75"/>
+                </Border>
             </Grid>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
@@ -48,32 +50,28 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <!--<Border Grid.Row="0" Background="Black" Height="100"/>-->
+        
         <!--TitlePanel contains the name of the application and page title.-->
-        <StackPanel x:Name="TitlePanel" Margin="29,0,-17,45">
-            <Image
-                Grid.Column="3"
-                Source="/Images/seasonPredict.png"
-                Height="100"
-                Width="470"
-                />
-            <TextBlock x:Name="ListTitle" Text="Pick Your Team" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" />
+        <StackPanel x:Name="TitlePanel">
+            <Border Background="Black">
+                <Image
+                    Source="/Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
+            </Border>
+            <TextBlock x:Name="ListTitle" Text="Pick Your Team" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" />
         </StackPanel>
 
         <!--ContentPanel - place additional content here.-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12, -30, 12, 0" Width="440">
-                    <ListBox
-                        x:Name="teamsListBox" 
-                        ItemsSource="{Binding aTeams}"                        
-                        ItemTemplate="{StaticResource TeamListBoxItemTemplate}"
-                        SelectionChanged="teamsListBox_SelectionChanged"
-                        ScrollViewer.VerticalScrollBarVisibility="Auto" />
-                <!--controls:PivotItem Header="home">
-                    <ListBox 
-                        x:Name="homeToDoItemsListBox" 
-                        ItemsSource="{Binding HomeToDoItems}" 
-                        Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource ToDoListBoxItemTemplate}" />
-                </controls:PivotItem-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12, 0, 12, 0" Width="440">
+            <ListBox
+                x:Name="teamsListBox" 
+                ItemsSource="{Binding aTeams}"                        
+                ItemTemplate="{StaticResource TeamListBoxItemTemplate}"
+                SelectionChanged="teamsListBox_SelectionChanged"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" />
         </Grid>
     </Grid>
 

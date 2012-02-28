@@ -62,8 +62,11 @@ namespace CollegeFootballSeasonPredictor.View
                     BackgroundImage = new Uri(string.Format("/Images/Logos/{0}", selectedTeam.LogoPath), UriKind.Relative),
                     Title = "NCAA FB Predict"
                 };
-
                 ShellTile.Create(new Uri(string.Format("/View/ScheduleView.xaml?Team={0}", selectedTeam.TeamName), UriKind.Relative), NewTileData);
+            }
+            else
+            {
+                MessageBox.Show("This team is already pinned to your home screen.", "Already Pinned", MessageBoxButton.OK);
             }
         }
 
@@ -83,6 +86,17 @@ namespace CollegeFootballSeasonPredictor.View
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 

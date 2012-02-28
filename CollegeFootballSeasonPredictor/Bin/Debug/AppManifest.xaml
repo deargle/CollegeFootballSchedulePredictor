@@ -2,7 +2,9 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="CollegeFootballSeasonPredictor" Source="CollegeFootballSeasonPredictor.dll" />
     <AssemblyPart x:Name="FlurryWP7SDK" Source="FlurryWP7SDK.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile.UI" Source="Microsoft.Advertising.Mobile.UI.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
   </Deployment.Parts>
 </Deployment>

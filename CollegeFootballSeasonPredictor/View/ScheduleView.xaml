@@ -71,24 +71,28 @@
                         Grid.Row="3" 
                         />
                 </Grid>
-                <Image
-                    Grid.RowSpan="1"
-                    Grid.Column="0"
-                    Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Grid.Row="0"
-                    VerticalAlignment="Center"
-                    Height="75"
-                    Width="75"
-                    />
-                <Image
-                    Grid.RowSpan="1"
-                    Grid.Column="4"
-                    Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
-                    Grid.Row="0"
-                    VerticalAlignment="Center"
-                    Height="75"
-                    Width="75"
-                    />
+                <Border Background="Black" Grid.Row="0" Grid.Column="0">
+                    <Image
+                        Grid.RowSpan="1"
+                        Grid.Column="0"
+                        Source="{Binding HomeTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        Height="75"
+                        Width="75"
+                        />
+                </Border>
+                <Border Background="Black" Grid.Row="0" Grid.Column="4">
+                    <Image
+                        Grid.RowSpan="1"
+                        Grid.Column="4"
+                        Source="{Binding AwayTeam.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        Height="75"
+                        Width="75"
+                        />
+                </Border>
                 <TextBlock
                     Name="HomeTeamConfidence"
                     Text="{Binding Confidence, Converter={StaticResource ConfidenceConverter}, ConverterParameter=Home, StringFormat=P1}"
@@ -126,26 +130,27 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="29,0,-17,20">
-            <Image
-                Grid.Column="3"
-                Source="/Images/seasonPredict.png"
-                Height="100"
-                Width="470"
-                />
+        <StackPanel x:Name="TitlePanel" Grid.Row="0">
+            <Border Background="Black">
+                <Image
+                    Source="/Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
+            </Border>
             <TextBlock x:Name="PageTitle"
-                Margin="9,-7,0,0" 
                 Style="{StaticResource PhoneTextTitle1Style}"
                 VerticalAlignment="Center"
                 Text="{Binding SelectedTeam.DisplayName}"
                 FontSize="40"
+                       Margin="18,0,0,0"
                 />
             <TextBlock x:Name="Instructions"
-                Margin="9,0,0,0" 
                 Style="{StaticResource PhoneTextTitle1Style}"
                 VerticalAlignment="Center"
                 Text="move slider towards predicted winner"
                 FontSize="25"
+                       Margin="18,0,0,0"
                 />
         </StackPanel>
 
@@ -167,13 +172,13 @@
                     <TextBlock 
                         Text="HOME" 
                         FontSize="{StaticResource PhoneFontSizeMedium}"
-                        Padding="25,0,0,0"
+                        Padding="48,0,0,0"
                         VerticalAlignment="Center"
                         Grid.Column="0"
                         Grid.Row="0"/>
                     <TextBlock 
                         Text="AWAY"
-                        Padding="0,0,25,0"
+                        Padding="0,0,48,0"
                         FontSize="{StaticResource PhoneFontSizeMedium}"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right"
