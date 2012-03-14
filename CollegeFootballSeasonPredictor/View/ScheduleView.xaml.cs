@@ -17,14 +17,32 @@ using System.Collections.ObjectModel;
 using System.Windows.Data;
 using System.Globalization;
 using Microsoft.Phone.Shell;
+using Microsoft.Devices.Sensors;
 
 namespace CollegeFootballSeasonPredictor.View
 {
     public partial class ScheduleView : PhoneApplicationPage
     {
+        Accelerometer accelerometer;
+
         public ScheduleView()
         {
             InitializeComponent();
+
+            this.accelerometer = new Accelerometer();
+            this.accelerometer.CurrentValueChanged += Accelerometer_CurrentValueChanged;
+        }
+
+        void Accelerometer_CurrentValueChanged(object sender, SensorReadingEventArgs<AccelerometerReading> e)
+        {
+            if (ShakeDetection.JustShook(e.SensorReading.Acceleration))
+            {
+                // We're on a different thread, so transition to the UI thread
+                this.Dispatcher.BeginInvoke(delegate()
+                {
+                    PredictButton_Click(null, null);
+                });
+            }
         }
 
         private void teamsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,9 +52,16 @@ namespace CollegeFootballSeasonPredictor.View
 
         private void PredictButton_Click(object sender, EventArgs e)
         {
-            App.ScheduleViewModel.SimulateSchedule();
+            try
+            {
+                App.ScheduleViewModel.SimulateSchedule();
 
-            NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
+            }
+            catch (InvalidOperationException ex)
+            {
+                // App is not in the foreground, don't navigate
+            }
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
@@ -82,6 +107,21 @@ namespace CollegeFootballSeasonPredictor.View
             this.DataContext = App.ScheduleViewModel;
 
             base.OnNavigatedTo(e);
+
+            // Start the accelerometer
+            try
+            {
+                this.accelerometer.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Unable to start your accelerometer. Shake-to-predict will be disabled. To enable, please try running this app again.", "Accelerometer Error", MessageBoxButton.OK);
+            }
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -92,6 +132,13 @@ namespace CollegeFootballSeasonPredictor.View
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             base.OnNavigatingFrom(e);
+
+            // Stop the accelerometer
+            try
+            {
+                this.accelerometer.Stop();
+            }
+            catch { /* Nothing to do */ }
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)

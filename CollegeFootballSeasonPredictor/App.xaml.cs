@@ -15,6 +15,7 @@ using Microsoft.Phone.Shell;
 using CollegeFootballSeasonPredictor.Model;
 using CollegeFootballSeasonPredictor.ViewModel;
 using System.IO.IsolatedStorage;
+using Microsoft.Devices.Sensors;
 
 namespace CollegeFootballSeasonPredictor
 {
@@ -22,6 +23,7 @@ namespace CollegeFootballSeasonPredictor
     {
         private static TeamViewModel _teamViewModel = null;
         private static string FLURRY_API_KEY = "3N7F44LR1UMS9EMCPL3C";
+
 
         /// <summary>
         /// A static ViewModel used by the views to bind against.
@@ -112,7 +114,6 @@ namespace CollegeFootballSeasonPredictor
                     throw new Exception("Reference Database not loaded correctly");
                 }
             }
-            
 
         }
 

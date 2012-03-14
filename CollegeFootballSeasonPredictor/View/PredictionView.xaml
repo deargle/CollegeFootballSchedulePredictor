@@ -8,12 +8,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:CollegeFootballSeasonPredictor.View"
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeSmall}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="False" xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+    shell:SystemTray.IsVisible="True" >
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="resultTemplate">
@@ -42,12 +43,14 @@
                         Height="75"
                         Width="75"/>
                 </Border>
-                <Border Padding="0,5" Grid.Column="3">
+                <Border Padding="0,5" Margin="0,0,16,0" Grid.Column="3">
                     <Image
                             Grid.Column="3"
                             Source="{Binding Winner.LogoPath, StringFormat='/Images/Logos/\{0\}'}"
                             Height="75"
-                            Width="75"/>
+                            Width="75"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
                 </Border>
                 <Border Padding="0,5" Grid.Column="1">
                         <Image
@@ -64,11 +67,24 @@
     <Grid x:Name="LayoutRoot">
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <controls:Panorama Title="{Binding SelectedTeam.DisplayName}" Grid.Row="0">
-                <controls:PanoramaItem Header="Summary" >
+
+            <!--TitlePanel contains the name of the application and page title.-->
+            <StackPanel x:Name="TitlePanel">
+                <Border Background="Black">
+                    <Image
+                    Source="/Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
+                </Border>
+            </StackPanel>
+
+            <controls:Pivot Title="{Binding SelectedTeam.TeamName}" FontSize="25" Grid.Row="1">
+                <controls:PivotItem Header="Summary" >
                     <Grid HorizontalAlignment="Stretch" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="100" />
@@ -138,10 +154,10 @@
                                 VerticalAlignment="Bottom"
                                 Width="75"/-->
                     </Grid>
-                </controls:PanoramaItem>
+                </controls:PivotItem>
 
                 <!--Panorama item two-->
-                <controls:PanoramaItem Header="Outcome" Margin="0,0,0,10">
+                <controls:PivotItem Header="Outcome" Margin="0,0,0,10">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -155,7 +171,7 @@
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="210" />
                             </Grid.ColumnDefinitions>
                             <TextBlock 
                                 Text="Home" 
@@ -172,7 +188,8 @@
                                 Grid.Column="1"
                                 Grid.Row="0"/>
                             <TextBlock 
-                                Text="Winner" 
+                                Text="Winner"
+                                Margin="0,0,16,0"
                                 FontSize="{StaticResource PhoneFontSizeMedium}"
                                 VerticalAlignment="Center"
                                 TextAlignment="Center"
@@ -180,7 +197,7 @@
                                 Grid.Row="0"
                                 />
                         </Grid>
-                        <ScrollViewer Grid.Row="1" Height="350">
+                        <ScrollViewer Grid.Row="1" Height="390">
                             <Border Padding="0,0,16,0">
                             <ItemsControl
                                 ScrollViewer.VerticalScrollBarVisibility="Visible"
@@ -190,11 +207,17 @@
                             </Border>
                         </ScrollViewer>
                     </Grid>
-                </controls:PanoramaItem>
-            </controls:Panorama>
+                </controls:PivotItem>
+
+                <controls:PivotItem Header="More" Margin="0,0,0,10">
+                    <StackPanel VerticalAlignment="Center">
+                        <Button Click="PredictButton_Click" Content="predict again!" Height="72" HorizontalAlignment="Center" Margin="12,15,0,15" Name="PredictButton" VerticalAlignment="Top" Width="280" />
+                    </StackPanel>
+                </controls:PivotItem>
+            </controls:Pivot>
             
             <my:AdControl AdUnitId="82073" ApplicationId="9c046d06-d49e-462d-81fc-379df01db395" 
-                                Grid.Row="1" Height="80" HorizontalAlignment="Center"   
+                                Grid.Row="2" Height="80" HorizontalAlignment="Center"   
                                 Name="adControl1" VerticalAlignment="Center" Width="480" />
         </Grid>
     </Grid>

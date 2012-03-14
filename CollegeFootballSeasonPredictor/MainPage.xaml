@@ -66,6 +66,11 @@
 
         <!--ContentPanel - place additional content here.-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12, 0, 12, 0" Width="440">
+            <!--ProgressBar 
+               IsIndeterminate="false"
+               x:Name="customIndeterminateProgressBar"
+               Style="{StaticResource CustomIndeterminateProgressBar}"
+            /-->
             <ListBox
                 x:Name="teamsListBox" 
                 ItemsSource="{Binding aTeams}"                        

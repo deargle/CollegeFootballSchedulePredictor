@@ -34,11 +34,11 @@
         
         <!--Pivot Control-->
         <controls:Pivot Grid.Row="1" >
-            <controls:Pivot.HeaderTemplate>
+            <!--controls:Pivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding}" FontSize="40"/>
                 </DataTemplate>
-            </controls:Pivot.HeaderTemplate>
+            </controls:Pivot.HeaderTemplate-->
             
             <!--Pivot item-->
             <controls:PivotItem Header="Instructions">
