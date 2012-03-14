@@ -39,7 +39,8 @@
                     <TextBlock Text="{Binding}" FontSize="40"/>
                 </DataTemplate>
             </controls:Pivot.HeaderTemplate>
-            <!--Pivot item one-->
+            
+            <!--Pivot item-->
             <controls:PivotItem Header="Instructions">
                 <TextBlock Text=
                     "Season Predictor factors in team statistics with your confidence to predict who wins every match. Simply follow the easy steps below!&#13;&#13;1) Select a team from the NCAA&#13;&#13;2) Move the slider towards the team you think will win&#13;&#13;Now you know, so get moving!"
@@ -47,13 +48,21 @@
                     FontSize="25" Margin="12,0,0,0" />
             </controls:PivotItem>
 
-            <!--Pivot item two-->
+            <!--Pivot item-->
+            <controls:PivotItem Header="Links">
+                <StackPanel Margin="0,-100,0,0" VerticalAlignment="Center">
+                    <Button Click="ReviewButton_Click" Content="review this app" Height="72" HorizontalAlignment="Center" Margin="12,15,0,15" Name="ReviewButton" VerticalAlignment="Top" Width="280" />
+                    <Button Click="FeedbackButton_Click" Content="send feedback" Height="72" HorizontalAlignment="Center" Margin="12,15,0,15" Name="FeedbackButton" VerticalAlignment="Top" Width="280" />
+                    <Button Click="DetailsButton_Click" Content="view app details" Height="72" HorizontalAlignment="Center" Margin="12,15,0,15" Name="DetailsButton" VerticalAlignment="Top" Width="280" />
+                </StackPanel>
+            </controls:PivotItem>
+
+            <!--Pivot item-->
             <controls:PivotItem Header="Disclaimer">
                 <TextBlock Text=
                     "All team and league information, sports logos, sports uniforms and names contained within this app are properties of their respective leagues, teams, ownership groups and/or organizations."
                     TextWrapping="Wrap"
-                    FontSize="25"
-                    Margin="12,0,0,0"/>
+                    FontSize="25" Margin="12,0,0,0" />
             </controls:PivotItem>
         </controls:Pivot>
     </Grid>
