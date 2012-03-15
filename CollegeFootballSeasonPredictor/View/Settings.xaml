@@ -1,18 +1,26 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="CollegeFootballSeasonPredictor.View.About"
+    x:Class="CollegeFootballSeasonPredictor.View.Settings"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:local="clr-namespace:CollegeFootballSeasonPredictor"
+    xmlns:local2="clr-namespace:CollegeFootballSeasonPredictor.View"
+    
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:AppSettings x:Key="appSettings"></local:AppSettings>
+        <local2:ToggleSwitchContentConverter x:Key="toggleSwitchContentConverter" />
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -21,41 +29,23 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+
         <!--TitlePanel contains the name of the application and page title.-->
         <StackPanel x:Name="TitlePanel" >
             <Border Background="Black">
                 <Image
-                Source="/Images/seasonPredict.png"
-                Height="100"
-                Width="470"
-                />
+                    Source="/Images/seasonPredict.png"
+                    Height="100"
+                    Width="470"
+                    />
             </Border>
-            <TextBlock x:Name="PageTitle" Text="About" Padding="10,0,0,0" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Settings" Padding="10,0,0,0" Margin="12,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel>
-                <HyperlinkButton
-                    NavigateUri="/View/Instructions.xaml"
-                    Margin="0,12,0,0"
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Left"
-                    Style="{StaticResource EmptyButtonStyle}">
-                    <TextBlock local:TiltEffect.IsTiltEnabled="True" Text="Instructions" Margin="12,3,0,15" Style="{StaticResource PhoneTextLargeStyle}"  />
-                </HyperlinkButton>
-                <HyperlinkButton
-                    NavigateUri="/View/Disclaimer.xaml"
-                    Margin="0,12,0,0"
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Left"
-                    Style="{StaticResource EmptyButtonStyle}">
-                    <TextBlock local:TiltEffect.IsTiltEnabled="True" Text="Disclaimer" Margin="12,3,0,15" Style="{StaticResource PhoneTextLargeStyle}" />
-                </HyperlinkButton>
-                <Button Click="ReviewButton_Click" Content="review this app" Margin="0,15" Name="ReviewButton" VerticalAlignment="Top" />
-                <Button Click="FeedbackButton_Click" Content="send feedback" Margin="0,15" Name="FeedbackButton" VerticalAlignment="Top" />
-                <Button Click="DetailsButton_Click" Content="view app details" Margin="0,15" Name="DetailsButton" VerticalAlignment="Top" />
-            </StackPanel>
+            <toolkit:ToggleSwitch Header="Shake-to-Predict Setting" Content="{Binding Source={StaticResource appSettings}, Path=ShakeToPredictSetting, Converter={StaticResource toggleSwitchContentConverter}}" Height="Auto" Margin="0,20,0,0" Name="shakeToPredictSetting" 
+            IsChecked="{Binding Source={StaticResource appSettings}, Path=ShakeToPredictSetting, Mode=TwoWay}" Checked="ShakeToPredict_Toggled" Unchecked="ShakeToPredict_Toggled"/>
         </Grid>
     </Grid>
  

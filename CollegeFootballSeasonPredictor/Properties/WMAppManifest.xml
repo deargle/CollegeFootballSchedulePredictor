@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{49aedcfa-d3f0-46da-8c0a-525456dd3fa6}" Title="NCAA FB Predictor" RuntimeType="Silverlight" Version="1.1.0.0" Genre="apps.normal" Author="CollegeFootballSeasonPredictor author" Description="Sample description" Publisher="CollegeFootballSeasonPredictor">
+  <App xmlns="" ProductID="{49aedcfa-d3f0-46da-8c0a-525456dd3fa6}" Title="NCAA FB Predictor" RuntimeType="Silverlight" Version="1.4.0.0" Genre="apps.normal" Author="CollegeFootballSeasonPredictor author" Description="Sample description" Publisher="CollegeFootballSeasonPredictor">
     <IconPath IsRelative="true" IsResource="false">smallPhoneAppTile.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />

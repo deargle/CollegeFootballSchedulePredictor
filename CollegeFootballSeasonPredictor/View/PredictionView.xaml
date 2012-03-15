@@ -197,7 +197,7 @@
                                 Grid.Row="0"
                                 />
                         </Grid>
-                        <ScrollViewer Grid.Row="1" Height="390">
+                        <ScrollViewer Grid.Row="1" Height="380">
                             <Border Padding="0,0,16,0">
                             <ItemsControl
                                 ScrollViewer.VerticalScrollBarVisibility="Visible"
@@ -225,8 +225,10 @@
     <!--Panorama-based applications should not show an ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Mode="Minimized" IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.back.rest.png" Click="BackButton_Click" Text="Back"/>            
+            <!--shell:ApplicationBarIconButton IconUri="/Images/appbar.back.rest.png" Click="BackButton_Click" Text="Back"/-->
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="About" Click="AboutButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.feature.settings.rest.png" Text="Settings" Click="SettingsButton_Click"/>
+            <shell:ApplicationBarIconButton Text="Pin Favorite" IconUri="/Images/MB_0001_pin.png" Click="SaveFavoriteTeamButton_Clicked" />
             <shell:ApplicationBarIconButton IconUri="/Images/PredictButton.png" Click="PredictButton_Click" Text="Predict"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

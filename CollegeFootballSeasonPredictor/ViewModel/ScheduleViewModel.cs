@@ -24,6 +24,7 @@ namespace CollegeFootballSeasonPredictor.ViewModel
             {
                 if (_footballDB == null)
                 {
+                    if (_footballDBConnectionString == null) _footballDBConnectionString = CollegeFootballSchedulePredictorDataContext.DBConnectionString;
                     _footballDB = new CollegeFootballSchedulePredictorDataContext(_footballDBConnectionString);
                     
                 }

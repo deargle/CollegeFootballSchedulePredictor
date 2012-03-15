@@ -109,14 +109,19 @@ namespace CollegeFootballSeasonPredictor.View
             base.OnNavigatedTo(e);
 
             // Start the accelerometer
-            try
-            {
-                this.accelerometer.Start();
-            }
-            catch
-            {
-                MessageBox.Show("Unable to start your accelerometer. Shake-to-predict will be disabled. To enable, please try running this app again.", "Accelerometer Error", MessageBoxButton.OK);
-            }
+            
+                AppSettings settings = new AppSettings();
+                if (settings.ShakeToPredictSetting)
+                {
+                    try
+                    {
+                        this.accelerometer.Start();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Unable to start your accelerometer. Shake-to-predict will be disabled. To enable, please try running this app again.", "Accelerometer Error", MessageBoxButton.OK);
+                    }
+                }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -127,6 +132,11 @@ namespace CollegeFootballSeasonPredictor.View
         private void BackButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/Settings.xaml", UriKind.Relative));
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -146,7 +156,6 @@ namespace CollegeFootballSeasonPredictor.View
             e.Cancel = true;
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
-
     }
 
     public class ConfidenceConverter : IValueConverter

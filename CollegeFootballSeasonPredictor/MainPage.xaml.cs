@@ -76,5 +76,10 @@ namespace CollegeFootballSeasonPredictor
             base.OnNavigatedTo(e);
         }
 
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/Settings.xaml", UriKind.Relative));
+        }
+
     }
 }

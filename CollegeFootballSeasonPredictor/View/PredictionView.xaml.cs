@@ -18,6 +18,7 @@ using CollegeFootballSeasonPredictor.Model;
 using System.Windows.Data;
 using Microsoft.Advertising.Mobile.UI;
 using Microsoft.Devices.Sensors;
+using Microsoft.Phone.Shell;
 
 namespace CollegeFootballSeasonPredictor.View
 {
@@ -61,6 +62,32 @@ namespace CollegeFootballSeasonPredictor.View
             //NavigationService.Navigate(new Uri("/View/PredictionView.xaml", UriKind.Relative));
         }
 
+        // http://msdn.microsoft.com/en-us/library/hh202979(v=vs.92).aspx
+        private void SaveFavoriteTeamButton_Clicked(object sender, EventArgs e)
+        {
+            Team selectedTeam = App.ScheduleViewModel.SelectedTeam;
+
+            // Look to see whether the Tile already exists and if so, don't try to create it again.
+            ShellTile TileToFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(string.Format("Team={0}", selectedTeam.TeamName)));
+
+            if (TileToFind == null)
+            {
+                // Create the Tile object and set some initial properties for the Tile.
+                // The Count value of 12 shows the number 12 on the front of the Tile. Valid values are 1-99.
+                // A Count value of 0 indicates that the Count should not be displayed.
+                StandardTileData NewTileData = new StandardTileData
+                {
+                    BackgroundImage = new Uri(string.Format("/Images/Logos/{0}", selectedTeam.LogoPath), UriKind.Relative),
+                    Title = "NCAA FB Predict"
+                };
+                ShellTile.Create(new Uri(string.Format("/View/ScheduleView.xaml?Team={0}", selectedTeam.TeamName), UriKind.Relative), NewTileData);
+            }
+            else
+            {
+                MessageBox.Show("This team is already pinned to your home screen.", "Already Pinned", MessageBoxButton.OK);
+            }
+        }
+
         private void ShowPopup()
         {
             this.popup = new Popup();
@@ -102,6 +129,11 @@ namespace CollegeFootballSeasonPredictor.View
             NavigationService.Navigate(new Uri("/View/ScheduleView.xaml", UriKind.Relative));
         }
 
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/View/Settings.xaml", UriKind.Relative));
+        }
+
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
             base.OnBackKeyPress(e);
@@ -126,7 +158,6 @@ namespace CollegeFootballSeasonPredictor.View
 
         }
 
-
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             string refresh;
@@ -136,14 +167,19 @@ namespace CollegeFootballSeasonPredictor.View
             }
             base.OnNavigatedTo(e);
 
-            // Start the accelerometer
-            try
+            
+            AppSettings settings = new AppSettings();
+            if (settings.ShakeToPredictSetting)
             {
-                this.accelerometer.Start();
-            }
-            catch
-            {
-                MessageBox.Show("Unable to start your accelerometer. Shake-to-predict will be disabled. To enable, please try running this app again.", "Accelerometer Error", MessageBoxButton.OK);
+                // Start the accelerometer
+                try
+                {
+                    this.accelerometer.Start();
+                }
+                catch
+                {
+                    MessageBox.Show("Unable to start your accelerometer. Shake-to-predict will be disabled. To enable, please try running this app again.", "Accelerometer Error", MessageBoxButton.OK);
+                }
             }
             
         }
